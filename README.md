@@ -4,13 +4,13 @@ that I would like to evaluate/present:
 - **Providing healthcare access to the very remote areas in the Philippines**
 - **Data analysis from monitoring device to provide recommendations to their diet**
     
-## Personal Health and Nutrition Tracker
+# Personal Health and Nutrition Tracker
 
-# Objective
+### Objective
 
-# How it works 
+### How it works 
 
-# Preview
+### Preview
 
 This is the draft preview of the monitoring website [jysndabu](https://23w-gbac.github.io/jysndabu/).
 
