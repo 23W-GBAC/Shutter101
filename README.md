@@ -7,6 +7,7 @@ But I am more leaning towards my second option.
     
 # Personal Health and Nutrition Tracker
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 # How it works 
@@ -19,6 +20,13 @@ We create a recommender system that provides a person the right and appropriate 
 ### How it works 
 >>>>>>> f7d32adf02e598c9cb3e274fe6bd2f2435bb962a
 
+=======
+
+### Objective
+
+### How it works 
+
+>>>>>>> f7d32adf02e598c9cb3e274fe6bd2f2435bb962a
 =======
 
 ### Objective
