@@ -3,6 +3,7 @@ As part of the  requirements in General Business Administration and Accounting. 
 that I would like to evaluate/present: 
 - **Providing healthcare access to the very remote areas in the Philippines**
 - **Data analysis from monitoring device to provide recommendations to their diet**
+
 But I am more leaning towards my second option. 
     
 # Personal Health and Nutrition Tracker
