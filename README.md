@@ -3,12 +3,12 @@ As part of the  requirements in General Business Administration and Accounting. 
 that I would like to evaluate/present: 
 - **Providing healthcare access to the very remote areas in the Philippines**
 - **Data analysis from monitoring device to provide recommendations to their diet**
+But I am more leaning towards my second option. 
     
 ## Personal Health and Nutrition Tracker
 
-# Objective
-
 # How it works 
+We create a recommender system that provides a person the right and appropriate foods according to health status. This data comes from his/her current data from the monitoring devices, past medical records, existing health condition and his/her preference in foods. But are these datas enough for me to create such system? And that is I still need to figure out. 
 
 # Preview
 
