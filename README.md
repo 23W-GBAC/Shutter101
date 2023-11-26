@@ -116,7 +116,7 @@ Or before pushing any images to the repositories we could run a script to compre
 		Knowing that, I could extract metadata of each images and list it down to a JSON file or in a Markdown file.
 	</li>
 	<li>Another one is automatic renaming  of every images for easy plugin in the markdown file </li>
-	<li>Lastly, how could I automatically call out the description of each photos in a JSON or Markdoen file. So that I don't need of manually typing it in my README.md?
+	<li>Lastly, how could I automatically call out the description of each photos in a JSON or Markdoen file. So that I don't need of manually typing it in my README.md?</li>
 </ol>
 
 ______
