@@ -61,42 +61,42 @@ Let me show you some of my work which are taken from my home country **Philippin
 
 >All my images will be located at my repository with a folder  name **photos**.
 
-<link rel="stylesheet" href="/Test101/css/photo-tile.css">
+<link rel="stylesheet" href="/Shutter101/css/photo-tile.css">
 <div class="gallery">
 	<figure>	
-		<img src="/Test101/photos/photo1.jpg" alt="Photo1">
+		<img src="/Shutter101/photos/photo1.jpg" alt="Photo1">
 		<figcaption>Canon m3, EF-M 22mm, ISO400, 6-sec, f/4.0</figcaption>
 	</figure>
 	<figure>		
-		<img src="/Test101/photos/photo2.jpg" alt="Photo2">
+		<img src="/Shutter101/photos/photo2.jpg" alt="Photo2">
 		<figcaption>Canon m3, Tamron 18-200mm, ISO100, 28mm, 1/80-sec, f/5.0</figcaption>
 	</figure>
   	<figure>	
-		<img src="/Test101/photos/photo3.jpg" alt="Photo3">
+		<img src="/Shutter101/photos/photo3.jpg" alt="Photo3">
 		<figcaption>Canon m3, Tamron 18-200mm, 18mm, ISO640,  1/800-sec, f/5.6</figcaption>
 	</figure>
 	<figure>	
-		<img src="/Test101/photos/photo4.jpg" alt="Photo4">
+		<img src="/Shutter101/photos/photo4.jpg" alt="Photo4">
 		<figcaption>Canon m3, Tamron 18-200mm, ISO200, 100mm, 1/500-sec, f/11.0</figcaption>
   	</figure>
 	<figure>	
-		<img src="/Test101/photos/photo5.jpg" alt="Photo5">
+		<img src="/Shutter101/photos/photo5.jpg" alt="Photo5">
 		<figcaption>Canon m3, Tamron 18-200mm, 28mm, 1/80-sec, f/5.0</figcaption>
 	</figure>
 	<figure>	
-		<img src="/Test101/photos/photo6.jpg" alt="Photo6">
+		<img src="/Shutter101/photos/photo6.jpg" alt="Photo6">
 		<figcaption>Canon m3, EF-M 22mm, ISO1600, 22mm, 20-sec, f/2.8</figcaption>
 	</figure>
 	<figure>	
-		<img src="/Test101/photos/photo7.JPG" alt="Photo7">
+		<img src="/Shutter101/photos/photo7.JPG" alt="Photo7">
 		<figcaption>Canon M3, EF 50mm, ISO100, 50mm, 1/250-sec, f/4.0</figcaption>
 	</figure> 
 	<figure>	
-		<img src="/Test101/photos/photo8.jpg" alt="Photo8">
+		<img src="/Shutter101/photos/photo8.jpg" alt="Photo8">
 		<figcaption>Canon M3, Tamron 18-200mm, ISO1250, 18mm, 1/500-sec, f/16.0</figcaption>
 	</figure> 
 	<figure>	
-		<img src="/Test101/photos/photo9.jpg" alt="Photo9">
+		<img src="/Shutter101/photos/photo9.jpg" alt="Photo9">
 		<figcaption>Canon M3, EF-M 22mm, ISO100, 22mm, 1/250-sec, f/11</figcaption>
 	</figure> 
 
@@ -111,7 +111,7 @@ During the creation of this first part of my blog, I would like to point out the
 Or before pushing any images to the repositories we could run a script to compress the images.</li>
 	<li>Adding description to all of the photos are time consuming, I have to look first for each properties of the images then add it to the description tag. I already have an idea on how to approach this problem. All of my images contains metadata. What does it mean?
 		<ul>
-			<li>**photo metadata** refers to the information embedded within a digital photograph that provides details about the image. This metadata includes various properties and settings related to the creation of the photo.</li>
+			<li>**Photo metadata** refers to the information embedded within a digital photograph that provides details about the image. This metadata includes various properties and settings related to the creation of the photo.</li>
 		</ul>
 		Knowing that, I could extract metadata of each images and list it down to a JSON file or in a Markdown file.
 	</li>
