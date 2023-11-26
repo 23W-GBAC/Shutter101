@@ -107,16 +107,14 @@ ______
 During the creation of this first part of my blog, I would like to point out the repetitive tasks that I did and some problems that I encounter. And let us figure out on how can we automate this tasks. 
 
 <ol>
-	<li>First problem is Github page is not design to cater such content where large size of files are used. You can see that most of my images are quite large in size. I am thinking if I could use third party packages which use uses CLI. My goal is that every time I add images to certain folder, it will automatically compress the images to the appropriate size.
-Or before pushing any images to the repositories we could run a script to compress the images.</li>
+	<li>First problem is Github page is not design to cater such content where large size of files are used. You can see that most of my images are quite large in size so it takes a while to render this images in Github pages. I need to compress each images.  I am thinking if I could use third party packages which uses CLI. My goal is that every time I add images to certain folder, it will automatically compress the images to the appropriate size or before pushing any images to the repositories we could run a script to compress the images.</li>
 	<li>Adding description to all of the photos are time consuming, I have to look first for each properties of the images then add it to the description tag. I already have an idea on how to approach this problem. All of my images contains metadata. What does it mean?
 		<ul>
 			<li>**Photo metadata** refers to the information embedded within a digital photograph that provides details about the image. This metadata includes various properties and settings related to the creation of the photo.</li>
 		</ul>
-		Knowing that, I could extract metadata of each images and list it down to a JSON file or in a Markdown file.
+		Knowing that, I could extract metadata of each images and list it down to a JSON file or in a Markdown file. But how could I automatically call out the description of each photos in a JSON or Markdown file. So that I don't need of manually typing it in my README.md?
 	</li>
 	<li>Another one is automatic renaming  of every images for easy plugin in the markdown file </li>
-	<li>Lastly, how could I automatically call out the description of each photos in a JSON or Markdoen file. So that I don't need of manually typing it in my README.md?
 
 </ol>
 
