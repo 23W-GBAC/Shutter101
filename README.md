@@ -115,11 +115,6 @@ During the creation of this first part of my blog, I would like to point out the
 		Knowing that, I could extract metadata of each images and list it down to a JSON file or in a Markdown file. But how could I automatically call out the description of each photos in a JSON or Markdown file. So that I don't need of manually typing it in my README.md?
 	</li>
 	<li>Another one is automatic renaming  of every images for easy plugin in the markdown file </li>
-<<<<<<< HEAD
-
-=======
-	<li>Lastly, how could I automatically call out the description of each photos in a JSON or Markdoen file. So that I don't need of manually typing it in my README.md?</li>
->>>>>>> c60dd9f47fa75ecec122bb46242ea9b811349dbb
 </ol>
 
 ______
