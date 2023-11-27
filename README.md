@@ -1,8 +1,11 @@
+## The JYSNDB BLOG
 
+###### <mark>Nov. 11 2023</mark> WEEK 1
+______
 
-##  :wave: Hello there, I'm **Jayson**.
+### WHOAMI
 
-:school: I'm a first year Health Informatics  student at THD European Campus Rottal-Inn. I have been learning programming languages like Python and R. I have basic understanding with HTML, CSS and Javascript. 
+Hello there, I'm **Jayson**. I'm a first year Health Informatics  student at THD European Campus Rottal-Inn. I have been learning programming languages like Python and R. I have very basic understanding of HTML, CSS and Javascript. 
 
 Embark on a visual journey with my blog, where captivating photos come to life. Immerse yourself in the art of photography as I not only showcase my stunning captures but also unveil the secrets behind mastering the camera. Join me in exploring innovative techniques while seamlessly integrating the power of Linux scripting to automate and enhance the photographic process. Elevate your skills and discover the intersection of creativity and technology.
 
@@ -12,50 +15,43 @@ And I invite you to help me on how can I speed up the process from getting the i
 
 _____
 
+#### The Principle
+
 The **exposure triangle** is a fundamental concept in photography that explains the relationship between three key elements that determine the exposure of an image: aperture, shutter speed, and ISO. Understanding the exposure triangle is crucial for achieving well-exposed and visually appealing photographs.
 
-<ol>
-	<li>Aperture
-		<ul>
-			<li>Aperture refers to the size of the opening in the lens through which light enters the camera.</li>
-			<li>A larger aperture (smaller f-number, e.g., f/2.8) allows more light to enter, resulting in a brighter image. A smaller aperture (larger f-number, e.g., f/16) reduces the amount of light, resulting in a darker image.</li>
-			<li>Aperture also influences the depth of field. A wide aperture (e.g., f/2.8) creates a shallow depth of field, isolating the subject from the background. A narrow aperture (e.g., f/16) increases the depth of field, keeping more of the scene in focus.</li>
-		</ul>
-	</li>
-	<li>Shutter Speed
-		<ul>
-			<li> Shutter speed refers to the amount of time the camera's shutter remains open, exposing the camera sensor to light.</li>
-			<li>A faster shutter speed (e.g., 1/1000s) allows less light and is suitable for freezing fast-moving subjects. A slower shutter speed (e.g., 1/30s) allows more light and is ideal for capturing motion or in low-light conditions.</li>
-			<li>Shutter speed also affects the perception of motion. Faster shutter speeds freeze action, while slower speeds may introduce intentional motion blur.</li>
-		</ul>
-	</li>
-	<li>ISO(Sensitivity to Light)
- 		<ul>
-			<li>ISO measures the sensitivity of the camera sensor to light.</li>
-			<li>Higher ISO values (e.g., ISO 800, 1600) make the sensor more sensitive to light, resulting in a brighter image. Lower ISO values (e.g., ISO 100, 200) reduce sensitivity, resulting in a darker image.</li>
-			<li>Increasing ISO introduces digital noise, affecting image quality. Therefore, it's essential to find a balance between ISO and other exposure settings.</li>
-		</ul>
-	</li>
-</ol>
+
+1. Aperture
+	- Aperture refers to the size of the opening in the lens through which light enters the camera.
+	- A larger aperture (smaller f-number, e.g., f/2.8) allows more light to enter, resulting in a brighter image. A smaller aperture (larger f-number, e.g., f/16) reduces the amount of light, resulting in a darker image.
+	- Aperture also influences the depth of field. A wide aperture (e.g., f/2.8) creates a shallow depth of field, isolating the subject from the background. A narrow aperture (e.g., f/16) increases the depth of field, keeping more of the scene in focus.
+2. Shutter Speed
+	- Shutter speed refers to the amount of time the camera's shutter remains open, exposing the camera sensor to light.
+	- A faster shutter speed (e.g., 1/1000s) allows less light and is suitable for freezing fast-moving subjects. A slower shutter speed (e.g., 1/30s) allows more light and is ideal for capturing motion or in low-light conditions.
+	- Shutter speed also affects the perception of motion. Faster shutter speeds freeze action, while slower speeds may introduce intentional motion blur.
+3. ISO(Sensitivity to Light)
+	- ISO measures the sensitivity of the camera sensor to light.
+	- Higher ISO values (e.g., ISO 800, 1600) make the sensor more sensitive to light, resulting in a brighter image. Lower ISO values (e.g., ISO 100, 200) reduce sensitivity, resulting in a darker image.
+	- Increasing ISO introduces digital noise, affecting image quality. Therefore, it's essential to find a balance between ISO and other exposure settings.
 
 #### Balancing the Exposure Triangle
-<ul>
-	<li>Achieving the correct exposure involves finding the right combination of aperture, shutter speed, and ISO for a given lighting situation.</li>
-	<li>Adjusting one element may require compensating with the others to maintain a balanced exposure.</li>
-	<li>The exposure triangle allows photographers to creatively control factors such as depth of field, motion blur, and image noise.</li>
-</ul>
+
+1. Achieving the correct exposure involves finding the right combination of aperture, shutter speed, and ISO for a given lighting situation.
+2. Adjusting one element may require compensating with the others to maintain a balanced exposure.
+3. The exposure triangle allows photographers to creatively control factors such as depth of field, motion blur, and image noise.
+
 
 Example: 
 
-<ul>
-	<li>For a well-lit scene, you might use a lower ISO (e.g., ISO 100), a moderate aperture (e.g., f/8), and a shutter speed fast enough to avoid camera shake or motion blur.</li>
-	<li>In low-light conditions, you may increase ISO, use a wider aperture, or employ a slower shutter speed.</li>
-</ul>
+- For a well-lit scene, you might use a lower ISO (e.g., ISO 100), a moderate aperture (e.g., f/8), and a shutter speed fast enough to avoid camera shake or motion blur.
+- In low-light conditions, you may increase ISO, use a wider aperture, or employ a slower shutter speed.
 
 >Mastering the exposure triangle empowers photographers to adapt to various shooting conditions and achieve the desired creative effects in their images.
 >
 
+###### Source: ChatGPT
 ______
+
+## GALLERY 1: PHILIPPINES
 
 Let me show you some of my work which are taken from my home country **Philippines** and I will provide my camera setting to each photos  on how I setup my exposure triangle. 
 
@@ -104,21 +100,21 @@ Let me show you some of my work which are taken from my home country **Philippin
 
 ______
 
+#### ISSUES
+
 During the creation of this first part of my blog, I would like to point out the repetitive tasks that I did and some problems that I encounter. And let us figure out on how can we automate this tasks. 
 
-<ol>
-	<li>First problem is Github page is not design to cater such content where large size of files are used. You can see that most of my images are quite large in size so it takes a while to render this images in Github pages. I need to compress each images.  I am thinking if I could use third party packages which uses CLI. My goal is that every time I add images to certain folder, it will automatically compress the images to the appropriate size or before pushing any images to the repositories we could run a script to compress the images.</li>
-	<li>Adding description to all of the photos are time consuming, I have to look first for each properties of the images then add it to the description tag. I already have an idea on how to approach this problem. All of my images contains metadata. What does it mean?
-		<ul>
-			<li>**Photo metadata** refers to the information embedded within a digital photograph that provides details about the image. This metadata includes various properties and settings related to the creation of the photo.</li>
-		</ul>
-		Knowing that, I could extract metadata of each images and list it down to a JSON file or in a Markdown file. But how could I automatically call out the description of each photos in a JSON or Markdown file. So that I don't need of manually typing it in my README.md?
-	</li>
-	<li>Another one is automatic renaming  of every images for easy plugin in the markdown file </li>
-</ol>
+- First problem is Github page is not design to cater such content where large size of files are used. You can see that most of my images are quite large in size so it takes a while to render this images in Github pages. I need to compress each images.  I am thinking if I could use third party packages which uses CLI. My goal is that every time I add images to certain folder, it will automatically compress the images to the appropriate size or before pushing any images to the repositories we could run a script to compress the images.
+- Adding description to all of the photos are time consuming, I have to look first for each properties of the images then add it to the description tag. I already have an idea on how to approach this problem. All of my images contains metadata. What does it mean?
+	- **Photo metadata** refers to the information embedded within a digital photograph that provides details about the image. This metadata includes various properties and settings related to the creation of the photo. Knowing this, I could extract the metadata of each images and list it down to a JSON file or in a Markdown file. But how could I automatically call out the description of each photos in a JSON or Markdown file. So that I don't need of manually typing it in my README.md?
+- Another one is automatic renaming  of every images for easy plugin in the markdown file 
 
 ______
 
-- [ ] For the next update of this blog, I will add addtional places that I visited here in Germany and share any random facts about the ciy. 
-- [ ] I will do further study on how to solve my problems listed above. And share it to the blog. 
-- [ ] If someone wnats to share their capture, feel free to add. But the question is how?
+#### TASKS FOR WEEK 2
+
+- [ ]  For the next update of this blog, I will add addtional places that I visited here in Germany and share any random facts about the ciy. 
+- [ ]  I will do further study on how to solve my problems listed above. And share it to the blog. 
+- [ ]  If someone wants to showcase their home country and their beautiful images, feel free to add in this repo. How? Maybe create a div tag similar from my Gallery 1. 
+
+______
