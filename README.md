@@ -66,39 +66,39 @@ Details like aperture, shutter speed, and ISO reveal the technical choices made 
 <link rel="stylesheet" href="/Shutter101/css/photo-tile.css">
 <div class="gallery">
 	<figure>	
-		<img src="/Shutter101/photos/photo1.jpg" alt="Photo1">
+		<img src="/Shutter101/photos/PH/photo1.jpg" alt="Photo1">
 		<figcaption>Canon M3, EF-M 22mm, ISO400, 6-sec, f/4.0</figcaption>
 	</figure>
 	<figure>		
-		<img src="/Shutter101/photos/photo2.jpg" alt="Photo2">
+		<img src="/Shutter101/photos/PH/photo2.jpg" alt="Photo2">
 		<figcaption>Canon M3, Tamron 18-200mm, ISO100, 28mm, 1/80-sec, f/5.0</figcaption>
 	</figure>
   	<figure>	
-		<img src="/Shutter101/photos/photo3.jpg" alt="Photo3">
+		<img src="/Shutter101/photos/PH/photo3.jpg" alt="Photo3">
 		<figcaption>Canon M3, Tamron 18-200mm, 18mm, ISO640,  1/800-sec, f/5.6</figcaption>
 	</figure>
 	<figure>	
-		<img src="/Shutter101/photos/photo4.jpg" alt="Photo4">
+		<img src="/Shutter101/photos/PH/photo4.jpg" alt="Photo4">
 		<figcaption>Canon M3, Tamron 18-200mm, ISO200, 100mm, 1/500-sec, f/11.0</figcaption>
   	</figure>
 	<figure>	
-		<img src="/Shutter101/photos/photo5.jpg" alt="Photo5">
+		<img src="/Shutter101/photos/PH/photo5.jpg" alt="Photo5">
 		<figcaption>Canon M3, Tamron 18-200mm, 28mm, 1/80-sec, f/5.0</figcaption>
 	</figure>
 	<figure>	
-		<img src="/Shutter101/photos/photo6.jpg" alt="Photo6">
+		<img src="/Shutter101/photos/PH/photo6.jpg" alt="Photo6">
 		<figcaption>Canon M3, EF-M 22mm, ISO1600, 22mm, 20-sec, f/2.8</figcaption>
 	</figure>
 	<figure>	
-		<img src="/Shutter101/photos/photo7.JPG" alt="Photo7">
+		<img src="/Shutter101/photos/PH/photo7.JPG" alt="Photo7">
 		<figcaption>Canon M3, EF 50mm, ISO100, 50mm, 1/250-sec, f/4.0</figcaption>
 	</figure> 
 	<figure>	
-		<img src="/Shutter101/photos/photo8.jpg" alt="Photo8">
+		<img src="/Shutter101/photos/PH/photo8.jpg" alt="Photo8">
 		<figcaption>Canon M3, Tamron 18-200mm, ISO1250, 18mm, 1/500-sec, f/16.0</figcaption>
 	</figure> 
 	<figure>	
-		<img src="/Shutter101/photos/photo9.jpg" alt="Photo9">
+		<img src="/Shutter101/photos/PH/photo9.jpg" alt="Photo9">
 		<figcaption>Canon M3, EF-M 22mm, ISO100, 22mm, 1/250-sec, f/11</figcaption>
 	</figure> 
 
