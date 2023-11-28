@@ -1,24 +1,27 @@
-## The JYSNDB BLOG
+## The JYSNDB BLOG: "Capturing Moments and Freezing Time in Frames"
 
-###### <mark>Nov. 11 2023</mark> WEEK 1
+###### <mark>Nov. 11 2023 | WEEK 1</mark> 
 ______
 
 ### WHOAMI
 
-Hello there, I'm **Jayson**. I'm a first year Health Informatics  student at THD European Campus Rottal-Inn. I have been learning programming languages like Python and R. I have very basic understanding of HTML, CSS and Javascript. 
+Hello there, I'm **Jayson**. I'm a first year Health Informatics  student at THD European Campus Rottal-Inn. I have been learning programming languages like Python and R. I have very basic understanding of HTML, CSS and Javascript. I am fascinated of taking pictures of the places that I have been to so I created this repos as a blog to my photo gallery of my travels. While also providing  informations about photography. In addition, adding automation scipts while creating this blog.  
+
+______ 
+
+### THE ART OF PHOTOGRAPHY
 
 Embark on a visual journey with my blog, where captivating photos come to life. Immerse yourself in the art of photography as I not only showcase my stunning captures but also unveil the secrets behind mastering the camera. Join me in exploring innovative techniques while seamlessly integrating the power of Linux scripting to automate and enhance the photographic process. Elevate your skills and discover the intersection of creativity and technology.
 
-Take a visual journey through my blog and discover the beauty of Germany and beyond. From charming villages to stunning landscapes, each photo captures the essence of these places. Join me in exploring iconic landmarks and hidden gems, and let the images inspire your wanderlust. Whether you're into historic castles or serene natural vistas, this blog is a window to the world's most beautiful destinations, inviting you to dream, explore, and appreciate the extraordinary in the ordinary. 
+Take a visual journey through my blog and discover the beauty of Germany and beyond. From charming villages to stunning landscapes, each photo captures the essence of these places. Join me in exploring iconic landmarks and hidden gems, and let the images inspire your wanderlust. Whether you're into historic castles or serene natural vistas, this blog is a window to the world's most beautiful destinations, inviting you to dream, explore, and appreciate the extraordinary in the ordinary. From capturing fleeting moments to composing visual narratives, join us in unraveling the creative tapestry that makes each photograph a unique piece of art. Discover the magic of light, the power of storytelling, and the nuances of composition that transform ordinary scenes into extraordinary visual masterpieces. Whether you're a seasoned photographer or an enthusiast, let's dive into the captivating world where creativity meets the click of a shutte
 
 And I invite you to help me on how can I speed up the process from getting the images from my device into submitting it to my repository. Setting my github page to a photo gallery like website.  But before that let's ask our friend Chat GPT to give us or educate us on what are the necessary informations to be considered when taking photos in your device specially in manual mode.
 
 _____
 
-#### The Principle
+#### The Principle Behind Every Pictures
 
-The **exposure triangle** is a fundamental concept in photography that explains the relationship between three key elements that determine the exposure of an image: aperture, shutter speed, and ISO. Understanding the exposure triangle is crucial for achieving well-exposed and visually appealing photographs.
-
+Composing a photograph involves a fundamental concept known as the exposure triangle. The **exposure triangle** is a fundamental concept in photography that explains the relationship between three key elements that determine the exposure of an image: aperture, shutter speed, and ISO. Understanding the exposure triangle is crucial for achieving well-exposed and visually appealing photographs.
 
 1. Aperture
 	- Aperture refers to the size of the opening in the lens through which light enters the camera.
@@ -53,35 +56,38 @@ ______
 
 ## GALLERY 1: PHILIPPINES
 
-Let me show you some of my work which are taken from my home country **Philippines** and I will provide my camera setting to each photos  on how I setup my exposure triangle. 
+Let me show you some of my work which are taken from my home country **Philippines** and I will provide my camera setting to each photos  on how I setup my exposure triangle. Why is it important for me to provide this details? 
 
->All my images will be located at my repository with a folder  name **photos**.
+For aspiring photographers or enthusiasts, seeing the camera settings alongside a photograph serves as a learning tool. It helps them understand how different settings contribute to the final image.
+Details like aperture, shutter speed, and ISO reveal the technical choices made by the photographer. This insight can inspire others to experiment with similar techniques in their own work.
+
+>All my images are located at my repository with a folder  name  of the location.
 
 <link rel="stylesheet" href="/Shutter101/css/photo-tile.css">
 <div class="gallery">
 	<figure>	
 		<img src="/Shutter101/photos/photo1.jpg" alt="Photo1">
-		<figcaption>Canon m3, EF-M 22mm, ISO400, 6-sec, f/4.0</figcaption>
+		<figcaption>Canon M3, EF-M 22mm, ISO400, 6-sec, f/4.0</figcaption>
 	</figure>
 	<figure>		
 		<img src="/Shutter101/photos/photo2.jpg" alt="Photo2">
-		<figcaption>Canon m3, Tamron 18-200mm, ISO100, 28mm, 1/80-sec, f/5.0</figcaption>
+		<figcaption>Canon M3, Tamron 18-200mm, ISO100, 28mm, 1/80-sec, f/5.0</figcaption>
 	</figure>
   	<figure>	
 		<img src="/Shutter101/photos/photo3.jpg" alt="Photo3">
-		<figcaption>Canon m3, Tamron 18-200mm, 18mm, ISO640,  1/800-sec, f/5.6</figcaption>
+		<figcaption>Canon M3, Tamron 18-200mm, 18mm, ISO640,  1/800-sec, f/5.6</figcaption>
 	</figure>
 	<figure>	
 		<img src="/Shutter101/photos/photo4.jpg" alt="Photo4">
-		<figcaption>Canon m3, Tamron 18-200mm, ISO200, 100mm, 1/500-sec, f/11.0</figcaption>
+		<figcaption>Canon M3, Tamron 18-200mm, ISO200, 100mm, 1/500-sec, f/11.0</figcaption>
   	</figure>
 	<figure>	
 		<img src="/Shutter101/photos/photo5.jpg" alt="Photo5">
-		<figcaption>Canon m3, Tamron 18-200mm, 28mm, 1/80-sec, f/5.0</figcaption>
+		<figcaption>Canon M3, Tamron 18-200mm, 28mm, 1/80-sec, f/5.0</figcaption>
 	</figure>
 	<figure>	
 		<img src="/Shutter101/photos/photo6.jpg" alt="Photo6">
-		<figcaption>Canon m3, EF-M 22mm, ISO1600, 22mm, 20-sec, f/2.8</figcaption>
+		<figcaption>Canon M3, EF-M 22mm, ISO1600, 22mm, 20-sec, f/2.8</figcaption>
 	</figure>
 	<figure>	
 		<img src="/Shutter101/photos/photo7.JPG" alt="Photo7">
