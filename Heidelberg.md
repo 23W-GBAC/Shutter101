@@ -37,7 +37,7 @@ Heidelberg is a town on the Neckar River in southwestern Germany. It’s known f
                 <figcaption>Camera settigs to be updated...</figcaption>
         </figure>
         <figure>
-                <img src="/Test101/photos/Heidelberg/img/photo9.jpg" alt="Photo9">
+                <img src="/Shutter101/photos/Heidelberg/img/photo9.jpg" alt="Photo9">
                 <figcaption>Camera settigs to be updated...</figcaption>
         </figure>
 	
