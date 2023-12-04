@@ -109,6 +109,10 @@ Details like aperture, shutter speed, and ISO reveal the technical choices made 
 		<figcaption><a href="Simbach.html">DE:_Simbach am Inn</a></figcaption>
 	</figure>
 	<figure>		
+		<img src="/Shutter101/photos/Portugal/img/photo10.jpg" alt="Photo10">
+		<figcaption><a href="Portugal.html">PT: Porto</a></figcaption>
+	</figure>
+	<figure>		
 		<img src="/Shutter101/photos/Heidelberg/img/photo4.jpg" alt="Photo4">
 		<figcaption><a href="Heidelberg.html">DE:_Heidelberg</a></figcaption>
 	</figure>
