@@ -5,7 +5,7 @@ Philippines, island country of Southeast Asia in the western Pacific Ocean. It i
 [Source](https://www.britannica.com/place/Philippines)
 
 
-<link rel="stylesheet" href="/Test101/css/photo-tile.css">
+<link rel="stylesheet" href="/Shutter101/css/photo-tile.css">
 <div class="gallery">
         <figure>
                 <img src="/Shutter101/photos/PH/img/photo1.jpg" alt="Photo1">
