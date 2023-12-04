@@ -42,15 +42,15 @@ Porto is a coastal city in northwest Portugal known for its stately bridges and 
                 <figcaption>Camera settigs to be updated...</figcaption>
         </figure>
         <figure>
-                <img src="/Shutter101/photos/Portugal/img/photo1.jpg" alt="Photo10">
+                <img src="/Shutter101/photos/Portugal/img/photo10.jpg" alt="Photo10">
                 <figcaption>Camera settigs to be updated...</figcaption>
         </figure>
         <figure>
-                <img src="/Shutter101/photos/Portugal/img/photo1.jpg" alt="Photo11">
+                <img src="/Shutter101/photos/Portugal/img/photo11.jpg" alt="Photo11">
                 <figcaption>Camera settigs to be updated...</figcaption>
         </figure>
         <figure>
-                <img src="/Shutter101/photos/Portugal/img/photo1.jpg" alt="Photo12">
+                <img src="/Shutter101/photos/Portugal/img/photo12.jpg" alt="Photo12">
                 <figcaption>Camera settigs to be updated...</figcaption>
         </figure>
 	
