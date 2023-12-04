@@ -50,7 +50,7 @@ In Simbach it is very good to live and work. Our guests also feel comfortable wi
                 <figcaption>Camera settigs to be updated...</figcaption>
         </figure>
         <figure>
-                <img src="/Test101/photos/Simbach/img/photo9.jpg" alt="Photo9">
+                <img src="/Shutter101/photos/Simbach/img/photo9.jpg" alt="Photo9">
                 <figcaption>Camera settigs to be updated...</figcaption>
         </figure>
 	
