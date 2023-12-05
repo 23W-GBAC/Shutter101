@@ -141,7 +141,7 @@ ______
 
 ###### <mark>Dec.4, 2023 | WEEK 2</mark> 
 
-### AUTOMATION: IMAGE COMPRESSION. 
+### AUTOMATION: RESIZE IMAGE. 
 
 #### ISSUE 1
 
