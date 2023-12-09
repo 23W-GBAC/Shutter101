@@ -29,7 +29,7 @@ My approach is to use the **direnv**. Why? My photo gallery contains  folder of 
 
 `sudo pamac install direnv`
 
-2. When I tried the direnv in one of my folders nothings happen. After installing you have to hook it to your shell so that it will work. I will only provide the code corresponding to **ZS**H other shell will be different. Add the following line at the end of the `~/.zshrc` file:
+2. When I tried the direnv in one of my folders nothings happen. After installing you have to hook it to your shell so that it will work. I will only provide the code corresponding to **ZSH** other shell will be different. Add the following line at the end of the `~/.zshrc` file:
 
 `eval "$(direnv hook bash)"`
 
@@ -46,7 +46,7 @@ cp ~/jysndabu/.envrc ~/jysndabu/photos/Gallery1
 
 My .envrc contains shell scripting that resize every images in the folder while keeping a record to the images that will be processed so that the script  will not repeat the resizing of all images if I added new photos or if I enter the directory again. It will only resize untrack photos. This will  not replace my original photos  but to create a resized copy of each which will be loacted to the specific folder called "img". To this we have to create a loop which check all imgaes in the folder if certain condition are met then it will perform certain tasks. 
 
-In this script I use [imagemagick](https://imagemagick.org/index.php) to resize images  and grep for searching the images in the list. 
+In this script I use [imagemagick](https://imagemagick.org/index.php) to resize images  and **grep** for searching the images in the list. 
 
 >*First we  have to create a directory called "img" for all  the resized images.*
 
@@ -56,7 +56,7 @@ In this script I use [imagemagick](https://imagemagick.org/index.php) to resize 
 
 `touch resized_images_list.md`
 
->*Then  we use "for" loop to access each images in the directory where the .envrc is located. I include all possible formats for images.*
+>*Then  we use for loop to access each images in the directory where the .envrc is located. I include all possible formats for images.*
 
 `for file in *.jpg *.jpeg *.png *.gif *.JPG *.JPEG; do` 
 
@@ -64,11 +64,11 @@ In this script I use [imagemagick](https://imagemagick.org/index.php) to resize 
 
 `filename=$(basename "$file")`
 
->*To check if the image is in the list of resized images, we use grep. -q to to silence it. *
+>*To check if the image is in the list of resized images, we use **grep**. -q to to silence it.*
 
 `if ! grep -q "$filename" "resized_images_list.md"; then`
 
->*If it return TRUE then we resize the image by using imagemagick.* 
+>*If it return TRUE then we resize the image by using **imagemagick**.* 
 
 `convert "$file" -resize "600x600>" "img/$filename"`
 
