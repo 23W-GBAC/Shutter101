@@ -1,15 +1,15 @@
-#### ISSUES
+## Issues encountered and the solutions
+
+### Week 1 
 
 During the creation of this first part of my blog, I would like to point out the repetitive tasks that I did and some problems that I encounter. And let us figure out on how can we automate this tasks. 
 
-~~- First problem is Github page is not design to cater such content where large size of files are used. You can see that most of my images are quite large in size so it takes a while to render this images in Github pages. I need to compress each images.  I am thinking if I could use third party packages which uses CLI. My goal is that every time I add images to certain folder, it will automatically compress the images to the appropriate size or before pushing any images to the repositories we could run a script to compress the images.~~
-- Adding description to all of the photos are time consuming, I have to look first for each properties of the images then add it to the description tag. I already have an idea on how to approach this problem. All of my images contains metadata. What does it mean?
-	- **Photo metadata** refers to the information embedded within a digital photograph that provides details about the image. This metadata includes various properties and settings related to the creation of the photo. Knowing this, I could extract the metadata of each images and list it down to a JSON file or in a Markdown file. But how could I automatically call out the description of each photos in a JSON or Markdown file. So that I don't need of manually typing it in my README.md?
-- Another one is automatic renaming  of every images for easy plugin in the markdown file 
+1. ~~First problem is Github page is not design to cater such content where large size of files are used. You can see that most of my images are quite large in size so it takes a while to render this images in Github pages. I need to compress each images.  I am thinking if I could use third party packages which uses CLI. My goal is that every time I add images to certain folder, it will automatically compress the images to the appropriate size or before pushing any images to the repositories we could run a script to compress the images.~~
 
-______
+2. Adding description to all of the photos are time consuming, I have to look first for each properties of the images then add it to the description tag. I already have an idea on how to approach this problem. All of my images contains metadata. What does it mean? **Photo metadata** refers to the information embedded within a digital photograph that provides details about the image. This metadata includes various properties and settings related to the creation of the photo. Knowing this, I could extract the metadata of each images and list it down to a JSON file or in a Markdown file. But how could I automatically call out the description of each photos in a JSON or Markdown file. So that I don't need of manually typing it in my README.md?
+	
 
-### TASKS FOR WEEK 2
+##### Tasks for Week 2
 
 - [x]  For the next update of this blog, I will add addtional places that I visited here in Germany and share any random facts about the ciy. 
 - [ ]  I will do further study on how to solve my problems listed above. And share it to the blog. 
@@ -17,11 +17,9 @@ ______
 
 ______
 
-###### <mark>Dec.4, 2023 | WEEK 2</mark> 
+### Week 2 | Dec.4, 2023
 
-### AUTOMATION: RESIZE IMAGE. 
-
-#### ISSUE 1
+##### Issue 1: RESIZE IMAGE. 
 
 One of the problem that I encounter while rendering my Github page  is the slow loading of my pictures. Given all my pictures are large in size, which I should already expect to happen. I keep all my pictures as high quality as much as possible but in preserving these attributes each images are to be in large file size. I do post-processing in Adobe Lightroom one RAW image is ca 40mb in size after conversion to JPG it will size down to ca. 10-15mb which is stillhigh. I do not want to do again a compression in my Lightroom as I will locate each images  again in my Lightroom library. So I opted to do it in CLI instead, which makes it way more faster. In my photo gallery, my images does not need to be in 100% of their actual resolution  which is 6000x4000. I will resize each images to exactly 600x600 that will result to significantly lower in file size. 
 
@@ -140,3 +138,5 @@ done
 ### TASKS FOR WEEK 3
 - [ ] Tasks from Week 1
 - [ ] To automate the creation of my gallery container each location like in Phil.md, Simbach.md, Heidelburg.md so everytime I add new collection it will self generate this markdown file. 
+
+______
