@@ -135,8 +135,13 @@ for file in *.jpg *.jpeg *.png *.gif *.JPG *.JPEG; do
 done
 ```
 
-### TASKS FOR WEEK 3
+##### Task for Week 3
 - [ ] Tasks from Week 1
 - [ ] To automate the creation of my gallery container each location like in Phil.md, Simbach.md, Heidelburg.md so everytime I add new collection it will self generate this markdown file. 
 
 ______
+
+
+*[Homepage](README.md)*
+
+*[Bact to Repository](https://github.com/23W-GBAC/Shutter101/tree/main)*
