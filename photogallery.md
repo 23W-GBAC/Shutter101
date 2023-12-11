@@ -24,7 +24,7 @@ Details like aperture, shutter speed, and ISO reveal the technical choices made 
 		<figcaption><a href="Heidelberg.html">DE: Heidelberg</a></figcaption>
 	</figure>
 	<figure>		
-		<img src="/Shutter101/photos/Burghausen/img/20231210170207_IMG_8565.JPG)" alt="IMG_8565.JPG)">
+		<img src="/Shutter101/photos/Burghausen/img/20231210170207_IMG_8565.JPG" alt="IMG_8565.JPG)">
 		<figcaption><a href="Burghausen.html">DE: Burghausen</a></figcaption>
 	</figure>
 </div>
