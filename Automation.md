@@ -145,11 +145,15 @@ ______
 
 ##### Issue 2: AUTO GENERATE IMAGE DESCRIPTION FROM A META DATA. 
 
-The goal for this week is to able to fetch all the necessary description from the metadata of the photo and put it as a description of the photo. I will be using the **EXIFTOOL** for this and here is the link for the documenation of this package [Link Here](https://exiftool.org/exiftool_pod.html). First I will try to check what are the outputs if I use exiftool to a photo. 
+The goal for this week is to able to fetch all the necessary description from the metadata of the photo and put it as a description of the photo. I will be using the **EXIFTOOL** and **AWK** for this.
+Here is the link for the documenation of [exiftool](https://exiftool.org/exiftool_pod.html). 
 
-Set the directory of your terminal where are the photos located. In this example I use the folder name "Simbach". Then in the command line I type:
+I will try to check what are the outputs if I use exiftool to a photo. 
+First, I set the directory of my terminal where are the photos located. In this example I use the folder "Simbach". Then in the command line:
+
 `exiftool photo1.jpg`
-The result will be like this:
+
+Then the result will be like this:
 
 ```
 ExifTool Version Number         : 12.70
@@ -285,8 +289,9 @@ Hyperfocal Distance             : 4.89 m
 Light Value                     : 14.0
 Lens ID                         : Canon EF-M 22mm f/2 STM
 ```
+The good thing from using the imagemagick for resizing the image, it retains all the metadata of the imgae. I tried different tool but some attributes are removed. 
 
-From this I only need the Model, Exposure Time, FNumber, ISO, and LensID. To get only these, the code will look like this:
+After knowing the result of exiftool, I check to the attributes that I only need which are Model, Exposure Time, FNumber, ISO, and LensID. To get only these I add this to exiftool `-attribute`:
 
 `exiftool -Model -ExposureTime -FNumber -ISO -LensModel photo1.jpg`
 
@@ -300,7 +305,7 @@ ISO                             : 100
 LensID                 	        : Canon EF-M 22mm f/2 STM
 ```
 
-Exifttool can also output this into a JSON format by just adding -j in the code. 
+Exifttool can also output this into a JSON format by just adding -j in the code.  But I will not be using this format. 
 
 `exiftool -j -Model -ExposureTime -FNumber -ISO -LensModel photo1.jpg`
 
@@ -317,7 +322,8 @@ In the result you would expect something like this:
 }]
 ```
 
-So from here my goal is to combine all these description into a one line only to look like this: **"Canon EOS M50, EF-M22mm f/2 STM, 1/400 sec, f/6.3, ISO100"**. The script should iterate to each images to read the metadata and append it to a new markdown which will be my container for the photo gallery. I will use for loop again and **awk** to output only the necessary fields or decription. We start by creating a script file which I will run after I resize the images. The script will look like this:
+After getting only the necessary attributes I should combine all these description into a one line only to look like this: **"Canon EOS M50, EF-M22mm f/2 STM, 1/400 sec, f/6.3, ISO100"**. The script that I will be making should iterate to each images to read the metadata and append it to a new markdown which will be my container for the photo gallery. I will use 
+**for loop** to iterate to all images and **awk** to output only the necessary fields or decription. From week 2 I created a script to resize the images automatically, the next step for that is to create a markdown file which will serve as my container for my photo gallery like the Phil.md or Simbach.md. The script will be like this:
 
 ```
 touch "$(basename "$(pwd)").md"
@@ -333,15 +339,16 @@ for file in *.{jpg,jpeg,png,gif,JPG,JPEG}; do
         echo -e "$model, $lensmodel, $exposuretime-sec, f/$fnumber, ISO$iso\n" >> "$(basename "$(pwd)").md"
 done
 ```
-After I resize the images, the next step is to create a markdown file which will serve as my container for my photo gallery.
-So I will start my code with creating the md file base on the name of the directory itself. We use *pwd(print working directory)* to get the directory name then *basename* for getting only the last part of the directory. 
+
+Creating the markdown file I will base the name of it on the name of the directory itself. We use *pwd(print working directory)* to get the directory name then *basename* for getting only the last part of the directory.  If I try pwd in the terminal it will give this: 
+
+>/home/jayson/jysndabu/photos/Simbach
+
+To get the Simabch name,  I added basename.
 
 `touch "$(basename "$(pwd)").md"`
 
-If I try pwd in the terminal it will give this: 
->/home/jayson/jysndabu/photos/Simbach
-
-Then we loop to each images like what I did to my previous script then do certain task. 
+Then we loop to each images like what I did from my previous script.. 
 
 `for file in *.{jpg,jpeg,png,gif,JPG,JPEG}; do`
 
@@ -349,7 +356,8 @@ Then I will create a variable in which the value will be the result of the combi
 
 `model=$(exiftool -Model $file | awk -F': ' '{print $2}')`
 
-Then after getting all the necessary description I will append this to the created markdown file formatted to a image tag for markdown followed by description. 
+Then after getting all the necessary description I will append this to the created markdown file formatted to an image tag for markdown followed by description. 
+
 >![Alt Text](Image Path)
 >
 >Image Description
