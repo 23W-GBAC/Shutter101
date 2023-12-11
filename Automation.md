@@ -143,7 +143,7 @@ ______
 
 ### Week 3 | Dec.11, 2023
 
-##### Issue 1: AUTO GENERATE IMAGE DESCRIPTION FROM A META DATA. 
+##### Issue 2: AUTO GENERATE IMAGE DESCRIPTION FROM A META DATA. 
 
 The goal for this week is to able to fetch all the necessary description from the metadata of the photo and put it as a description of the photo. I will be using the **EXIFTOOL** for this and here is the link for the documenation of this package [Link Here](https://exiftool.org/exiftool_pod.html). First I will try to check what are the outputs if I use exiftool to a photo. 
 
@@ -298,7 +298,6 @@ Exposure Time                   : 1/400
 F Number                        : 6.3
 ISO                             : 100
 LensID                 	        : Canon EF-M 22mm f/2 STM
-
 ```
 
 Exifttool can also output this into a JSON format by just adding -j in the code. 
@@ -335,18 +334,34 @@ for file in *.{jpg,jpeg,png,gif,JPG,JPEG}; do
 done
 ```
 After I resize the images, the next step is to create a markdown file which will serve as my container for my photo gallery.
-So I will start my code with creating it base on the name of the directory itself. We use *pwd(print working directory)* to get the directory name then basename for the getting only the last part of the Directory. 
-So if I try pwd in the terminal it will give this: 
+So I will start my code with creating the md file base on the name of the directory itself. We use *pwd(print working directory)* to get the directory name then *basename* for getting only the last part of the directory. 
 
+`touch "$(basename "$(pwd)").md"`
+
+If I try pwd in the terminal it will give this: 
 >/home/jayson/jysndabu/photos/Simbach
 
-then to get the Simbach we use *basename*. 
+Then we loop to each images like what I did to my previous script then do certain task. 
 
-Then we loop to each images like what I did to my previous script then do certain task. I used exiftool to get one information from the meta data of the image the result will be like this: ** Camera Model Name  : Canon EOS M50** but I only need the "Canon EOS M50" so we will use  **awk** to get that.  After that I save it to a variable. Then after getting all the necessary description I will append this to the created markdown file.
+`for file in *.{jpg,jpeg,png,gif,JPG,JPEG}; do`
+
+Then I will create a variable in which the value will be the result of the combine command of exiftool and awk.  I used exiftool to get one information from the meta data of the image then the result will be this: ** Camera Model Name  : Canon EOS M50** but I only need the "Canon EOS M50" so I will use  **awk** to get that. 
+
+`model=$(exiftool -Model $file | awk -F': ' '{print $2}')`
+
+Then after getting all the necessary description I will append this to the created markdown file formatted to a image tag for markdown followed by description. 
+>![Alt Text](Image Path)
+>
+>Image Description
+>
+
+`echo -e "![$file](/Shutter101/photos/$(basename "$(pwd)")/img/$file)\n" >> "$(basename "$(pwd)").md"`
+
+`echo -e "$model, $lensmodel, $exposuretime-sec, f/$fnumber, ISO$iso\n" >> "$(basename "$(pwd)").md"`
 
 After running this it created what I need but it also gave an error. 
 
-The content of my md file:
+The context of my md file created by this script:
 
 ```
 ![photo1.jpg](/Shutter101/photos/Simbach/img/photo1.jpg)
@@ -392,43 +407,23 @@ Canon EOS M50, 56mm F1.4 DC DN | Contemporary 018, 1/640-sec, f/5.0, ISO100
 , , -sec, f/, ISO
 ```
 
-Then the error message is like this:
+In the terminal,  the error message is like this:
 
 ```
 Error: File not found - *.jpeg
-Error: File not found - *.jpeg
-Error: File not found - *.jpeg
-Error: File not found - *.jpeg
-Error: File not found - *.jpeg
-Error: File not found - *.png
-Error: File not found - *.png
-Error: File not found - *.png
-Error: File not found - *.png
 Error: File not found - *.png
 Error: File not found - *.gif
-Error: File not found - *.gif
-Error: File not found - *.gif
-Error: File not found - *.gif
-Error: File not found - *.gif
 Error: File not found - *.JPG
-Error: File not found - *.JPG
-Error: File not found - *.JPG
-Error: File not found - *.JPG
-Error: File not found - *.JPG
-Error: File not found - *.JPEG
-Error: File not found - *.JPEG
-Error: File not found - *.JPEG
-Error: File not found - *.JPEG
 Error: File not found - *.JPEG
 ```
 
-I did not know what was the problem with my for loop, but it also treat these *(*.jpg, *.png, *.gif, *.JPG, *.JPEG)* as an actual image. That is why they are also included in the list which it should not be. 
+You can see in the last part of the markdown there are lines that are empty and unnecessary. I did not know what was the problem with my for loop, but it also treat these *.jpg, *.png, *.gif, *.JPG, *.JPEG as an actual image. That is why they are also included in the list which it should not be. 
 
-So to resolve this, we add condition to skip these file. 
+So to resolve this, we add condition to skip these files. 
 
 `if [ "$file" != "*.jpeg" ] && [ "$file" != "*.png" ] && [ "$file" != "*.gif" ] && [ "$file" != "*.JPG" ] && [ "$file" != "*.JPEG" ];`
 
-The full script will be like this:
+The full script will be like this and fixed the error:
 
 ```
 touch "$(basename "$(pwd)").md"
@@ -447,7 +442,27 @@ for file in *.{jpg,jpeg,png,gif,JPG,JPEG}; do
 done
 ```
 
-After this I can modify the markdown file to add description of the place and link this to my photo gallery page.
+After this I can modify the markdown file to add description of the place and link this to my photo gallery page. But with this format I will not be able to use my css script.
+
+##### Task for Week 4
+
+The only issue I have with this is that it can only be used once, if I add new images and rerun this it will iterate all over again to all images then append all the description to my existing markdown doubling down the result. Also if I modified the markdown adding new content after the images, it should echo next to the last image created not at the end of the markdown file. For example 
+
+```
+![20231210165720_IMG_8550.JPG](/Shutter101/photos/Burghausen/img/20231210165720_IMG_8550.JPG)
+Canon EOS M50, Canon EF-M 15-45mm f/3.5-6.3 IS STM, 1/640-sec, f/3.5, ISO500
+![20231210170207_IMG_8565.JPG](/Shutter101/photos/Burghausen/img/20231210170207_IMG_8565.JPG)
+Canon EOS M50, Sigma 56mm f/1.4 DC DN | C, 1/640-sec, f/3.5, ISO100
+INSERTION SHOULD BE HERE
+
+*[Homepage](README.md)*
+*[Bact to Repository](https://github.com/23W-GBAC/Shutter101/tree/main)*
+NOT HERE
+```
+And that would be my task for next week.
+
+- [ ] To polish the "auto generate description" script to make it reusable.
+- [ ] Try to merge the script of Resize Image and Auto Generate Description.
 
 ______
 
