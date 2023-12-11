@@ -145,10 +145,9 @@ ______
 
 ##### Issue 2: AUTO GENERATE IMAGE DESCRIPTION FROM A META DATA. 
 
-The goal for this week is to able to fetch all the necessary description from the metadata of the photo and put it as a description of the photo. I will be using the **EXIFTOOL** and **AWK** for this.
+Next issue was my manually typing of the image description of each images. I should create a script where I am  able to fetch all the necessary description from the metadata of the photo and put it as a description of the photo. I will be using the **EXIFTOOL** and **AWK** to do this.
 Here is the link for the documenation of [exiftool](https://exiftool.org/exiftool_pod.html). 
 
-I will try to check what are the outputs if I use exiftool to a photo. 
 First, I set the directory of my terminal where are the photos located. In this example I use the folder "Simbach". Then in the command line:
 
 `exiftool photo1.jpg`
@@ -289,7 +288,7 @@ Hyperfocal Distance             : 4.89 m
 Light Value                     : 14.0
 Lens ID                         : Canon EF-M 22mm f/2 STM
 ```
-The good thing from using the imagemagick for resizing the image, it retains all the metadata of the imgae. I tried different tool but some attributes are removed. 
+It printed all the available description embedded to the image. The good thing from using the imagemagick for resizing the image is it retains all the metadata of the imgae. I tried using different tool but some attributes are removed. 
 
 After knowing the result of exiftool, I check to the attributes that I only need which are Model, Exposure Time, FNumber, ISO, and LensID. To get only these I add this to exiftool `-attribute`:
 
