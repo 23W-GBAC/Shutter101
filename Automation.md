@@ -6,13 +6,13 @@ During the creation of this first part of my blog, I would like to point out the
 
 1. ~~First problem is Github page is not design to cater such content where large size of files are used. You can see that most of my images are quite large in size so it takes a while to render this images in Github pages. I need to compress each images.  I am thinking if I could use third party packages which uses CLI. My goal is that every time I add images to certain folder, it will automatically compress the images to the appropriate size or before pushing any images to the repositories we could run a script to compress the images.~~
 
-2. Adding description to all of the photos are time consuming, I have to look first for each properties of the images then add it to the description tag. I already have an idea on how to approach this problem. All of my images contains metadata. What does it mean? **Photo metadata** refers to the information embedded within a digital photograph that provides details about the image. This metadata includes various properties and settings related to the creation of the photo. Knowing this, I could extract the metadata of each images and list it down to a JSON file or in a Markdown file. But how could I automatically call out the description of each photos in a JSON or Markdown file. So that I don't need of manually typing it in my README.md?
+2.  ~~Adding description to all of the photos are time consuming, I have to look first for each properties of the images then add it to the description tag. I already have an idea on how to approach this problem. All of my images contains metadata. What does it mean? **Photo metadata** refers to the information embedded within a digital photograph that provides details about the image. This metadata includes various properties and settings related to the creation of the photo. Knowing this, I could extract the metadata of each images and list it down to a JSON file or in a Markdown file. But how could I automatically call out the description of each photos in a JSON or Markdown file. So that I don't need of manually typing it in my README.md?~~
 	
 
 ##### Tasks for Week 2
 
 - [x]  For the next update of this blog, I will add addtional places that I visited here in Germany and share any random facts about the ciy. 
-- [ ]  I will do further study on how to solve my problems listed above. And share it to the blog. 
+- [x]  I will do further study on how to solve my problems listed above. And share it to the blog. 
 - [ ]  If someone wants to showcase their home country and their beautiful images, feel free to add in this repo. How? Maybe create a div tag similar from my Gallery 1. 
 
 ______
@@ -136,17 +136,14 @@ done
 ```
 
 ##### Task for Week 3
-- [ ] Tasks from Week 1
-- [ ] To automate the creation of my gallery container each location like in Phil.md, Simbach.md, Heidelburg.md so everytime I add new collection it will self generate this markdown file. 
+- [x] Tasks from Week 1
+- [x] To automate the creation of my gallery container each location like in Phil.md, Simbach.md, Heidelburg.md so everytime I add new collection it will self generate this markdown file. 
 
 ______
 
-
-*[Homepage](README.md)*
-
-*[Bact to Repository](https://github.com/23W-GBAC/Shutter101/tree/main)*
-
 ### Week 3 | Dec.11, 2023
+
+##### Issue 1: AUTO GENERATE IMAGE DESCRIPTION FROM A META DATA. 
 
 The goal for this week is to able to fetch all the necessary description from the metadata of the photo and put it as a description of the photo. I will be using the **EXIFTOOL** for this and here is the link for the documenation of this package [Link Here](https://exiftool.org/exiftool_pod.html). First I will try to check what are the outputs if I use exiftool to a photo. 
 
@@ -333,7 +330,7 @@ for file in *.{jpg,jpeg,png,gif,JPG,JPEG}; do
         iso=$(exiftool -ISO $file | awk -F': ' '{print $2}')
         lensmodel=$(exiftool -LensID $file | awk -F': ' '{print $2}')
 
-        echo "![$file](/Shutter101/photos/$(basename "$(pwd)")/img/${file})" >> "$(basename "$(pwd)").md"
+        echo -e "![$file](/Shutter101/photos/$(basename "$(pwd)")/img/$file)\n" >> "$(basename "$(pwd)").md"
         echo -e "$model, $lensmodel, $exposuretime-sec, f/$fnumber, ISO$iso\n" >> "$(basename "$(pwd)").md"
 done
 ```
@@ -444,14 +441,19 @@ for file in *.{jpg,jpeg,png,gif,JPG,JPEG}; do
                 iso=$(exiftool -ISO $file | awk -F': ' '{print $2}')
                 lensmodel=$(exiftool -LensID $file | awk -F': ' '{print $2}')
 
-                echo "![$file](/Shutter101/photos/$(basename "$(pwd)")/img/${file})" >> "$(basename "$(pwd)").md"
+                echo -e "![$file](/Shutter101/photos/$(basename "$(pwd)")/img/$file)\n" >> "$(basename "$(pwd)").md"
                 echo -e "$model, $lensmodel, $exposuretime-sec, f/$fnumber, ISO$iso\n" >> "$(basename "$(pwd)").md"
         fi
 done
 ```
 
-After this I can modify the markdown file to add description to the place and link this to my main README file. 
+After this I can modify the markdown file to add description of the place and link this to my photo gallery page.
+
+______
 
 
+*[Homepage](README.md)*
+
+*[Bact to Repository](https://github.com/23W-GBAC/Shutter101/tree/main)*
 
 
