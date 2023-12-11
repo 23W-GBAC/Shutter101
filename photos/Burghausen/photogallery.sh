@@ -8,7 +8,7 @@ for file in *.{jpg,jpeg,png,gif,JPG,JPEG}; do
                 iso=$(exiftool -ISO $file | awk -F': ' '{print $2}')
                 lensmodel=$(exiftool -LensID $file | awk -F': ' '{print $2}')
 
-                echo "![$file](/Shutter101/photos/$(basename "$(pwd)")/img/${file})" >> "$(basename "$(pwd)").md"
+                echo -e "![$file](/Shutter101/photos/$(basename "$(pwd)")/img/$file)\n" >> "$(basename "$(pwd)").md"
                 echo -e "$model, $lensmodel, $exposuretime-sec, f/$fnumber, ISO$iso\n" >> "$(basename "$(pwd)").md"
         fi
 done
