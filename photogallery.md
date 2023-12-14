@@ -9,7 +9,7 @@ Details like aperture, shutter speed, and ISO reveal the technical choices made 
 <div class="gallery">
 	<figure>	
 		<img src="/Shutter101/photos/PH/img/photo4.jpg" alt="Photo4">
-		<figcaption><a href="Phil.html">Philippines</a></figcaption>
+		<figcaption><a href="PH.html">Philippines</a></figcaption>
 	</figure>
 	<figure>		
 		<img src="/Shutter101/photos/Simbach/img/photo3.jpg" alt="Photo3">
