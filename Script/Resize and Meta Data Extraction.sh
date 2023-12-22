@@ -55,7 +55,7 @@ done
 photocover=$(shuf -n 1 resized_images_list.md)
 
 #Container of Figure tag and Figure Caption.
-figuretag=$"	<figure>\n\t\t<img src='/Shutter101/photos/$(basename "$(pwd)")/img/$photocover' alt='$photocover'>\n\t\t<figcaption><a href="$(basename "$(pwd)").html">$(basename "$(pwd)")</a></figcaption>\n\t</figure>"
+figuretag=$"	<figure>\n\t\t<img src='/Shutter101/photos/$(basename "$(pwd)")/img/$photocover' alt='$photocover'>\n\t\t<figcaption><a href='"$(basename "$(pwd)").html"'>$(basename "$(pwd)")</a></figcaption>\n\t</figure>"
 
 #Append before the </div> the figuretag to my markdown file that contains my portfolio(photogallery.md). 
 if ! grep -q "$(basename "$(pwd)")" ~/jysndabu/photogallery.md; then

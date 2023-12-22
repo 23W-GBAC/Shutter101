@@ -33,11 +33,11 @@ Details like aperture, shutter speed, and ISO reveal the technical choices made 
 	</figure>
 <figure>
 		<img src='/Shutter101/photos/ÖschinenseeLake/img/IMG_4990.jpg' alt='IMG_4990.jpg'>
-		<figcaption><a href=ÖschinenseeLake.html>ÖschinenseeLake</a></figcaption>
+		<figcaption><a href="ÖschinenseeLake.html">ÖschinenseeLake</a></figcaption>
 	</figure>
 <figure>
 		<img src='/Shutter101/photos/Freiburg/img/IMG_3229.jpg' alt='IMG_3229.jpg'>
-		<figcaption><a href=Freiburg.html>Freiburg</a></figcaption>
+		<figcaption><a href="Freiburg.html">Freiburg</a></figcaption>
 	</figure>
 
 </div>
