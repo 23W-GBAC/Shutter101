@@ -31,6 +31,14 @@ Details like aperture, shutter speed, and ISO reveal the technical choices made 
 		<img src="/Shutter101/photos/Plovdiv/img/IMG_4654.jpg" alt="IMG_4654.jpg">
 		<figcaption><a href="Plovdiv.html">BG: Plovdiv</a></figcaption>
 	</figure>
+<figure>
+		<img src='/Shutter101/photos/ÖschinenseeLake/img/IMG_4990.jpg' alt='IMG_4990.jpg'>
+		<figcaption><a href=ÖschinenseeLake.html>ÖschinenseeLake</a></figcaption>
+	</figure>
+<figure>
+		<img src='/Shutter101/photos/Freiburg/img/IMG_3229.jpg' alt='IMG_3229.jpg'>
+		<figcaption><a href=Freiburg.html>Freiburg</a></figcaption>
+	</figure>
 
 </div>
 
@@ -38,3 +46,4 @@ Details like aperture, shutter speed, and ISO reveal the technical choices made 
 *[Homepage](README.md)*
 
 *[Bact to Repository](https://github.com/23W-GBAC/Shutter101/tree/main)*
+

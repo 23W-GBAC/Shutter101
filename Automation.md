@@ -1,12 +1,12 @@
 ## Issues encountered and the solutions
 
-### Week 1 
+### Initial Issues
 
 During the creation of this first part of my blog, I would like to point out the repetitive tasks that I did and some problems that I encounter. And let us figure out on how can we automate this tasks. 
 
-1. ~~First problem is Github page is not design to cater such content where large size of files are used. You can see that most of my images are quite large in size so it takes a while to render this images in Github pages. I need to compress each images.  I am thinking if I could use third party packages which uses CLI. My goal is that every time I add images to certain folder, it will automatically compress the images to the appropriate size or before pushing any images to the repositories we could run a script to compress the images.~~
+1. First problem is Github page is not design to cater such content where large size of files are used. You can see that most of my images are quite large in size so it takes a while to render this images in Github pages. I need to compress each images.  I am thinking if I could use third party packages which uses CLI. My goal is that every time I add images to certain folder, it will automatically compress the images to the appropriate size or before pushing any images to the repositories we could run a script to compress the images.
 
-2.  ~~Adding description to all of the photos are time consuming, I have to look first for each properties of the images then add it to the description tag. I already have an idea on how to approach this problem. All of my images contains metadata. What does it mean? **Photo metadata** refers to the information embedded within a digital photograph that provides details about the image. This metadata includes various properties and settings related to the creation of the photo. Knowing this, I could extract the metadata of each images and list it down to a JSON file or in a Markdown file. But how could I automatically call out the description of each photos in a JSON or Markdown file. So that I don't need of manually typing it in my README.md?~~
+2.  Adding description to all of the photos are time consuming, I have to look first for each properties of the images then add it to the description tag. I already have an idea on how to approach this problem. All of my images contains metadata. What does it mean? **Photo metadata** refers to the information embedded within a digital photograph that provides details about the image. This metadata includes various properties and settings related to the creation of the photo. Knowing this, I could extract the metadata of each images and list it down to a JSON file or in a Markdown file. But how could I automatically call out the description of each photos in a JSON or Markdown file. So that I don't need of manually typing it in my README.md?
 	
 
 ##### Tasks for Week 2
@@ -17,7 +17,7 @@ During the creation of this first part of my blog, I would like to point out the
 
 ______
 
-### Week 2 | Dec.4, 2023
+### UPDATE 1 | Dec.4, 2023
 
 ##### Issue 1: RESIZE IMAGE. 
 
@@ -141,7 +141,7 @@ done
 
 ______
 
-### Week 3 | Dec.11, 2023
+### UPDATE 2 | Dec.11, 2023
 
 ##### Issue 2: AUTO GENERATE IMAGE DESCRIPTION FROM A META DATA. 
 
@@ -468,8 +468,157 @@ NOT HERE
 ```
 And that would be my task for next week.
 
-- [ ] To polish the "auto generate description" script to make it reusable.
-- [ ] Try to merge the script of Resize Image and Auto Generate Description.
+- [x] To polish the "auto generate description" script to make it reusable.
+- [x] Try to merge the script of Resize Image and Auto Generate Description.
+
+______
+
+### UPDATE 2 | Dec.22, 2023
+
+To answer my previous issue, I combined the previous scripts of resizing and the meta data extraction into one script. This  script (**Resize and Meta Data Extraction.sh**) will be run only once at the beginning when I initially copy my new images. It will also create the necessary markdown files that I will be using later for my portfolio. 
+
+The script is as follows: 
+
+```
+#Create folder container (img) for resized images, markdown file for master list of resized images and a base MD file for the photogallery. 
+if ! -d "img"; then 
+        mkdir img
+else 
+        echo "The directory is already exists. Skipping write directory."
+fi 
+
+if ! -f "resized_images_list.md"; then 
+        touch resized_images_list.md
+else
+        echo "The file is already exists. Skipping file creation."
+fi 
+
+if ! -f "$(basename "$(pwd)").md"; then 
+        touch "$(basename "$(pwd)").md"
+        echo -e "## $(basename "$(pwd)")\n" >> $(basename "$(pwd)").md
+else 
+        echo "The file is already exists. Skipping file creation."
+fi
+
+#Iterate to each images in the folder
+for file in *.jpg *.jpeg *.png *.gif *.JPG *.JPEG; do
+        if [ -f "$file" ]; then
+                filename=$(basename "$file")
+
+                if ! grep -q "$filename" "resized_images_list.md"; then
+                        #Using ImageMagick resize image to a lower resolution.
+                        convert "$file" -resize "600x400>" "img/$filename"
+                        echo "Resizing of $file done."
+
+                        #Append the image name to the master list. 
+                        echo "$filename" >> resized_images_list.md
+                        echo "Image added to the list."
+
+                        #Create variables as container of the meta data.
+                        model=$(exiftool -Model $file | awk -F': ' '{print $2}')
+                        exposuretime=$(exiftool -ExposureTime $file | awk -F': ' '{print $2}')
+                        fnumber=$(exiftool -FNumber $file | awk -F': ' '{print $2}')
+                        iso=$(exiftool -ISO $file | awk -F': ' '{print $2}')
+                        lensmodel=$(exiftool -LensID $file | awk -F': ' '{print $2}')
+
+                        #Writing the image description using the variables created to the base markdown file for the photogallery. 
+                        echo -e "![$file](/Shutter101/photos/$(basename "$(pwd)")/img/$file)\n" >> "$(basename "$(pwd)").md"
+                        echo -e "$model, $lensmodel, $exposuretime-sec, f/$fnumber, ISO$iso\n" >> "$(basename "$(pwd)").md"
+                        echo "Image description of $file extracted." 
+                else 
+                        echo "File already processed.Skipping file."
+                fi
+        else
+                echo "File $file does not exist."
+        fi
+done 
+
+#Create a variable to select a cover image from the list of images. This will shuffle the images and select the first image in the list. 
+photocover=$(shuf -n 1 resized_images_list.md)
+
+#Container of Figure tag and Figure Caption.
+figuretag=$"    <figure>\n\t\t<img src='/Shutter101/photos/$(basename "$(pwd)")/img/$photocover' alt='$photocover'>\n\t\t<figcaption><a href="$(basename "$(pwd)").html">$(basename "$(pwd)")</a></figcaption>\n\t</figure>"
+
+#Append before the </div> the figuretag to my markdown file that contains my portfolio(photogallery.md). 
+if ! grep -q "$(basename "$(pwd)")" ~/jysndabu/photogallery.md; then
+        sed  -i "/<\/div>/i $figuretag" ~/jysndabu/photogallery.md
+        #Write the ending part  for the photogallery. 
+        echo -e "End\n" >> $(basename "$(pwd)").md
+        echo -e "*[Homepage](README.md)*\n" >>  $(basename "$(pwd)").md
+        echo -e "*[Bact to Repository](https://github.com/23W-GBAC/Shutter101/tree/main)*\n" >> $(basename "$(pwd)").md
+else
+    echo "Already in photo gallery container."
+fi
+```
+
+
+The next script (**AddAdditionalImages.sh**) will be use as .envrc file. The purpose of this is to check everytime I enter the folder if new images are added. If there are new images, it will resize and extract the meta data of the image then revise the respective markdown files.  But be sure that **direnv allow** is turn on to  the desired directory for this script to work. 
+
+
+```
+#Iterate to all images in the folder
+for file in *.jpg *.jpeg *.png *.gif *.JPG *.JPEG; do
+        #Check whether the file exist. 
+        if [ -f "$file" ]; then
+                filename=$(basename "$file")
+
+                #Check wether the image was  already resized, it means if it is in the master list. 
+                if ! grep -q "$filename" "resized_images_list.md"; then
+                        #If False do the convertion and extraction of Meta Data. 
+                        convert "$file" -resize "600x400>" "img/$filename"
+
+                        echo "Resizing of $file done."
+                        echo "$filename" >> resized_images_list.md
+
+
+                        model=$(exiftool -Model $file | awk -F': ' '{print $2}')
+                        exposuretime=$(exiftool -ExposureTime $file | awk -F': ' '{print $2}')
+                        fnumber=$(exiftool -FNumber $file | awk -F': ' '{print $2}')
+                        iso=$(exiftool -ISO $file | awk -F': ' '{print $2}')
+                        lensmodel=$(exiftool -LensID $file | awk -F': ' '{print $2}')
+
+                        imagedescription="![$file](/Shutter101/photos/$(basename "$(pwd)")/img/$file)\n$model, $lensmodel, $exposuretime-sec, f/$fnumber, ISO$iso\n"
+
+                        #Insert the description before the word "END" in the photogallery.md. 
+                        sed  -i "/End/i $imagedescription" "$(basename "$(pwd)").md"
+
+                        echo "Image description of $file added to $(basename "$(pwd)").md."
+
+                fi
+        fi
+done
+
+#Replace the markdown file for the image container in the main page. 
+cp $(basename "$(pwd)").md ~/jysndabu/
+```
+
+##### My request for everyone. 
+
+I am requesting for someone to try my script by adding your photos in my blog. Forked it, add new branch, add the images then run the script in your machine. 
+But make sure that exiftool and imagemagick is installed to your machine. 
+
+`sudo apt install imagemagick`
+
+`sudo apt install exiftool`
+
+
+This is a flow chart that will serve  as a guide on how would you proceed on trying my script.
+
+```mermaid
+flowchart TD
+	A[Create a folder with a name of the location where the pictures are taken in ~/jysndabu/photos/] --> B[Copy the photos you would like to share in the folder you created.];
+	B --> C[Copy the Resize and Meta Data Extraction.sh and .envrc from ~/jysndabu/Script to the folder you created.];
+	C --> D[Run this in the terminal: chmod +x Resize and Meta Data Extraction.sh];
+	D --> E[Then run ./Resize and Meta Data Extraction.sh];
+	E --> F[Modify the *Location.md if you would like to add some description to your photogallery.];
+	F --> G[Copy the *Location.md to ~/jysndabu/];
+	G --> H[Delete all copied(original) photos.];
+	H --> I[Finally, push your changes];
+```
+*\*Location refers to the created folder name*
+
+*If you encounter a problem doing this, please don't hesitate to contact me.*
+
 
 ______
 
