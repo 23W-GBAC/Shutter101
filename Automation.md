@@ -604,7 +604,7 @@ But make sure that exiftool and imagemagick is installed to your machine.
 
 This is a flow chart that will serve  as a guide on how would you proceed on trying my script.
 
-{% mermaid %}
+```mermaid
 graph TD;
     A["Create a folder with a name base on the location of youre photos in ~/jysndabu/photos/"]--> B[Copy the photos you would like to share in the folder you created]
     B-->C["Copy the Resize and Meta Data Extraction.sh and .envrc from ~/jysndabu/Script to the folder you created."];
@@ -614,7 +614,7 @@ graph TD;
     F-->G["Copy the *Location.md to ~/jysndabu/"];
     G-->H["Delete all copied(original) photos so that it will not be committed to the repository"];
     H-->I["Finally, Push your changes"];
-{% endmermaid %}
+```
 
 *\*Location refers to the name of created folder*
 
