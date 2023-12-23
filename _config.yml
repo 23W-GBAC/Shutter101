@@ -1,1 +1,2 @@
-mermaid: true
+plugins:
+  - jekyll-mermaid
