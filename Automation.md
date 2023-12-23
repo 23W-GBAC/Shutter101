@@ -605,20 +605,20 @@ But make sure that exiftool and imagemagick is installed to your machine.
 This is a flow chart that will serve  as a guide on how would you proceed on trying my script.
 
 ```mermaid
-flowchart TD
-	A[Create a folder with a name of the location where the pictures are taken in ~/jysndabu/photos/] --> B[Copy the photos you would like to share in the folder you created.];
-	B --> C[Copy the Resize and Meta Data Extraction.sh and .envrc from ~/jysndabu/Script to the folder you created.];
-	C --> D[Run this in the terminal: chmod +x Resize and Meta Data Extraction.sh];
-	D --> E[Then run ./Resize and Meta Data Extraction.sh];
-	E --> F[Modify the *Location.md if you would like to add some description to your photogallery.];
-	F --> G[Copy the *Location.md to ~/jysndabu/];
-	G --> H[Delete all copied(original) photos.];
-	H --> I[Finally, push your changes];
+graph TD;
+    A["Create a folder with a name base on the location of youre photos in ~/jysndabu/photos/"]--> B[Copy the photos you would like to share in the folder you created]
+    B-->C["Copy the Resize and Meta Data Extraction.sh and .envrc from ~/jysndabu/Script to the folder you created."];
+    C-->D["Run this in the terminal: chmod +x Resize and Meta Data Extraction.sh"];
+    D-->E["Then run ./Resize and Meta Data Extraction.sh"];
+    E-->F["Modify the *Location.md if you would like to add some description to your photogallery"];
+    F-->G["Copy the *Location.md to ~/jysndabu/"];
+    G-->H["Delete all copied(original) photos so that it will not be committed to the repository"];
+    H-->I["Finally, Push your changes"];
 ```
-*\*Location refers to the created folder name*
 
-*If you encounter a problem doing this, please don't hesitate to contact me.*
+*\*Location refers to the name of created folder*
 
+*If you encounter a problem doing this or something is not right, please don't hesitate to contact me.*
 
 ______
 
