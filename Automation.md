@@ -1,10 +1,4 @@
-<script type="module">
-  import mermaid from 'https://unpkg.com/mermaid@11/dist/mermaid.esm.min.mjs';
-
-  document.addEventListener('DOMContentLoaded', () => {
-    mermaid.initialize({ startOnLoad: true });
-  });
-</script>
+<script src="script.js"></script>
 
 ## Issues encountered and the solutions
 
