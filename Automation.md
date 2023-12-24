@@ -552,7 +552,7 @@ fi
 ```
 
 
-The next script (**AddAdditionalImages.sh**) will be use as .envrc file. The purpose of this is to check everytime I enter the folder if new images are added. If there are new images, it will resize and extract the meta data of the image then revise the respective markdown files.  But be sure that **direnv allow** is turn on to  the desired directory for this script to work. 
+The next script (**AddAdditionalImages.sh**) will be use as **.envrc file**. The purpose of this is to check everytime I enter the folder if new images are added. If there are new images, it will resize and extract the meta data of the image then revise the respective markdown files.  But be sure that **direnv allow** is turn on to  the desired directory for this script to work. 
 
 
 ```
