@@ -1,4 +1,3 @@
-IMG_3100.jpg
 IMG_3115.jpg
 IMG_3117.jpg
 IMG_3139.jpg

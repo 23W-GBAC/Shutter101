@@ -42,10 +42,6 @@ The “Pearl of the Salzach” Burghausen on the Bavarian-Austrian border is an 
 		<img src='/Shutter101/photos/Burghausen/img/20231210170207_IMG_8565.JPG' alt='20231210170207_IMG_8565.JPG'>
 		<figcaption>Canon EOS M50, 1/640-sec, f/3.5, ISO100, Sigma 56mm f/1.4 DC DN | C</figcaption>
 	</figure>
-<figure>
-	<img src='/Shutter101/photos/Burghausen/img/IMG_0499.jpg' alt='IMG_0499.jpg'>
-	<figcaption>Canon EOS M3, 1/500-sec, f/16.0, ISO1250, Canon EF-M 55-200mm f/4.5-6.3 IS STM</figcaption>
-</figure>
 </div>
 
 
