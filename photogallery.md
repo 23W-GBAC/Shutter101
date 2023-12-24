@@ -8,8 +8,8 @@ Details like aperture, shutter speed, and ISO reveal the technical choices made 
 <link rel="stylesheet" href="/Shutter101/css/photo-tile.css">
 <div class="gallery">
 	<figure>	
-		<img src="/Shutter101/photos/PH/img/photo4.jpg" alt="Photo4">
-		<figcaption><a href="Philippines.html">Philippines</a></figcaption>
+		<img src="/Shutter101/photos/Philippines/img/photo4.jpg" alt="Photo4">
+		<figcaption><a href="/Shutter101/photos/Philippines/Philippines.html">Philippines</a></figcaption>
 	</figure>
 	<figure>		
 		<img src="/Shutter101/photos/Simbach/img/photo3.jpg" alt="Photo3">
