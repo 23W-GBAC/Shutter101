@@ -20,7 +20,7 @@ Details like aperture, shutter speed, and ISO reveal the technical choices made 
 		<figcaption><a href="/Shutter101/photos/Portugal/Portugal.html">PT: Porto</a></figcaption>
 	</figure>
 	<figure>		
-		<img src="/Shutter101/photos/Plovdiv/img/IMG_4654.jpg" alt="IMG_4654.jpg">
+		<img src="/Shutter101/photos/Plovdiv/img/IMG_4841.jpg" alt="IMG_4841.jpg">
 		<figcaption><a href="/Shutter101/photos/Plovdiv/Plovdiv.html">BG: Plovdiv</a></figcaption>
 	</figure>
 	<figure>
@@ -36,7 +36,7 @@ Details like aperture, shutter speed, and ISO reveal the technical choices made 
 		<figcaption><a href="/Shutter101/photos/Heidelberg/Heidelberg.html">DE: Heidelberg</a></figcaption>
 	</figure>
 	<figure>		
-		<img src="/Shutter101/photos/Burghausen/img/20231210170207_IMG_8565.JPG" alt="IMG_8565.JPG">
+		<img src="/Shutter101/photos/Burghausen/img/20231210165720_IMG_8550.JPG" alt="20231210165720_IMG_8550">
 		<figcaption><a href="/Shutter101/photos/Burghausen/Burghausen.html">DE: Burghausen</a></figcaption>
 	</figure>
 </div>
