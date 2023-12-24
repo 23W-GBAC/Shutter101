@@ -1,3 +1,5 @@
+6-IMG_8322.jpg
+9-IMG_8300.jpg
 photo1.jpg
 photo2.jpg
 photo3.jpg
@@ -6,4 +8,3 @@ photo5.jpg
 photo6.jpg
 photo7.jpg
 photo8.jpg
-photo9.jpg

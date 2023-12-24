@@ -1,4 +1,4 @@
-## Simbach am Inn
+## Simbach
 
 Only a stopover of the Orient Express, today a cross-border middle centre with Braunau am Inn, framed by the nature of the Europareserver Inn reserve.
 
@@ -15,45 +15,51 @@ In Simbach it is very good to live and work. Our guests also feel comfortable wi
 
 [3D Tour at Simbach am Inn](https://tour.3d-innviertel.at/de/tour/simbach)
 
-![photo1.jpg](/Shutter101/photos/Simbach/img/photo1.jpg)
+<link rel='stylesheet' href='/Shutter101/css/photo-tile.css'>
+<div class='gallery'>
+	<figure>
+		<img src='/Shutter101/photos/Simbach/img/6-IMG_8322.jpg' alt='6-IMG_8322.jpg'>
+		<figcaption>Canon EOS M50, 1/640-sec, f/5.0, ISO100, Sigma 56mm f/1.4 DC DN | C</figcaption>
+	</figure>
+	<figure>
+		<img src='/Shutter101/photos/Simbach/img/9-IMG_8300.jpg' alt='9-IMG_8300.jpg'>
+		<figcaption>Canon EOS M50, 1/640-sec, f/5.0, ISO100, Sigma 56mm f/1.4 DC DN | C</figcaption>
+	</figure>
+	<figure>
+		<img src='/Shutter101/photos/Simbach/img/photo1.jpg' alt='photo1.jpg'>
+		<figcaption>Canon EOS M50, 1/400-sec, f/6.3, ISO100, Canon EF-M 22mm f/2 STM</figcaption>
+	</figure>
+	<figure>
+		<img src='/Shutter101/photos/Simbach/img/photo2.jpg' alt='photo2.jpg'>
+		<figcaption>Canon EOS M50, 1/640-sec, f/5.0, ISO100, Sigma 56mm f/1.4 DC DN | C</figcaption>
+	</figure>
+	<figure>
+		<img src='/Shutter101/photos/Simbach/img/photo3.jpg' alt='photo3.jpg'>
+		<figcaption>Canon EOS M50, 1/800-sec, f/5.6, ISO100, Sigma 56mm f/1.4 DC DN | C</figcaption>
+	</figure>
+	<figure>
+		<img src='/Shutter101/photos/Simbach/img/photo4.jpg' alt='photo4.jpg'>
+		<figcaption>Canon EOS M50, 1/400-sec, f/4.0, ISO100, Sigma 56mm f/1.4 DC DN | C</figcaption>
+	</figure>
+	<figure>
+		<img src='/Shutter101/photos/Simbach/img/photo5.jpg' alt='photo5.jpg'>
+		<figcaption>Canon EOS M50, 1/640-sec, f/5.0, ISO100, Sigma 56mm f/1.4 DC DN | C</figcaption>
+	</figure>
+	<figure>
+		<img src='/Shutter101/photos/Simbach/img/photo6.jpg' alt='photo6.jpg'>
+		<figcaption>Canon EOS M50, 1/320-sec, f/5.6, ISO100, Canon EF-M 22mm f/2 STM</figcaption>
+	</figure>
+	<figure>
+		<img src='/Shutter101/photos/Simbach/img/photo7.jpg' alt='photo7.jpg'>
+		<figcaption>Canon EOS M50, 1/800-sec, f/3.5, ISO100, Sigma 56mm f/1.4 DC DN | C</figcaption>
+	</figure>
+	<figure>
+		<img src='/Shutter101/photos/Simbach/img/photo8.jpg' alt='photo8.jpg'>
+		<figcaption>Canon EOS M50, 1/500-sec, f/7.1, ISO100, Canon EF-M 22mm f/2 STM</figcaption>
+	</figure>
 
-Canon EOS M50, Canon EF-M 22mm f/2 STM, 1/400-sec, f/6.3, ISO100
-
-![photo2.jpg](/Shutter101/photos/Simbach/img/photo2.jpg)
-
-Canon EOS M50, Sigma 56mm f/1.4 DC DN | C, 1/640-sec, f/5.0, ISO100
-
-![photo3.jpg](/Shutter101/photos/Simbach/img/photo3.jpg)
-
-Canon EOS M50, Sigma 56mm f/1.4 DC DN | C, 1/800-sec, f/5.6, ISO100
-
-![photo4.jpg](/Shutter101/photos/Simbach/img/photo4.jpg)
-
-Canon EOS M50, Sigma 56mm f/1.4 DC DN | C, 1/400-sec, f/4.0, ISO100
-
-![photo5.jpg](/Shutter101/photos/Simbach/img/photo5.jpg)
-
-Canon EOS M50, Sigma 56mm f/1.4 DC DN | C, 1/640-sec, f/5.0, ISO100
-
-![photo6.jpg](/Shutter101/photos/Simbach/img/photo6.jpg)
-
-Canon EOS M50, Canon EF-M 22mm f/2 STM, 1/320-sec, f/5.6, ISO100
-
-![photo7.jpg](/Shutter101/photos/Simbach/img/photo7.jpg)
-
-Canon EOS M50, Sigma 56mm f/1.4 DC DN | C, 1/800-sec, f/3.5, ISO100
-
-![photo8.jpg](/Shutter101/photos/Simbach/img/photo8.jpg)
-
-Canon EOS M50, Canon EF-M 22mm f/2 STM, 1/500-sec, f/7.1, ISO100
-
-![photo9.jpg](/Shutter101/photos/Simbach/img/photo9.jpg)
-
-Canon EOS M50, Sigma 56mm f/1.4 DC DN | C, 1/640-sec, f/5.0, ISO100
-
+</div>
 
 *[Homepage](README.md)*
 
 *[Bact to Repository](https://github.com/23W-GBAC/Shutter101/tree/main)*
-
-

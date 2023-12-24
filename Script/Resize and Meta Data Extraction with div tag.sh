@@ -14,6 +14,8 @@ fi
 if ! -f "$(basename "$(pwd)").md"; then 
 	touch "$(basename "$(pwd)").md"
 	echo -e "## $(basename "$(pwd)")\n" >> $(basename "$(pwd)").md
+	echo -e "<link rel='stylesheet' href='/Shutter101/css/photo-tile.css'>" >> $(basename "$(pwd)").md
+	echo -e "<div class='gallery'>" >> $(basename "$(pwd)").md
 else 
 	echo "The file is already exists. Skipping file creation."
 fi
@@ -40,10 +42,10 @@ for file in *.jpg *.jpeg *.png *.gif *.JPG *.JPEG; do
                		lensmodel=$(exiftool -LensID $file | awk -F': ' '{print $2}')
 		
 			#Writing the image description using the variables created to the base markdown file for the photogallery.
-			echo -e "<figure>" >> 	$(basename "$(pwd)").md
-			echo -e "<img src="/Shutter101/photos/$(basename "$(pwd)")/img/$file" alt="$file">" >> $(basename "$(pwd)").md
-			echo -e "<figcaption>$model, $exposuretime, $fnumber, $iso, $lensmodel</figcaption>" >> $(basename "$(pwd)").md
-			echo -e "</figure>\n" >> $(basename "$(pwd)").md
+			echo -e "\t<figure>" >> 	$(basename "$(pwd)").md
+			echo -e "\t\t<img src='/Shutter101/photos/$(basename "$(pwd)")/img/$file' alt='$file'>" >> $(basename "$(pwd)").md
+			echo -e "\t\t<figcaption>$model, $exposuretime-sec, f/$fnumber, ISO$iso, $lensmodel</figcaption>" >> $(basename "$(pwd)").md
+			echo -e "\t</figure>" >> $(basename "$(pwd)").md
 
 			#echo -e "![$file](/Shutter101/photos/$(basename "$(pwd)")/img/$file)\n" >> "$(basename "$(pwd)").md"
                		#echo -e "$model, $lensmodel, $exposuretime-sec, f/$fnumber, ISO$iso\n" >> "$(basename "$(pwd)").md"
@@ -60,7 +62,7 @@ done
 photocover=$(shuf -n 1 resized_images_list.md)
 
 #Container of Figure tag and Figure Caption.
-figuretag=$"	<figure>\n\t\t<img src='/Shutter101/photos/$(basename "$(pwd)")/img/$photocover' alt='$photocover'>\n\t\t<figcaption><a href="$(basename "$(pwd)").html">$(basename "$(pwd)")</a></figcaption>\n\t</figure>"
+figuretag=$"	<figure>\n\t\t<img src='/Shutter101/photos/$(basename "$(pwd)")/img/$photocover' alt='$photocover'>\n\t\t<figcaption><a href='/Shutter101/photos/$(basename "$(pwd)")/$(basename "$(pwd)").html'>$(basename "$(pwd)")</a></figcaption>\n\t</figure>"
 
 #Append before the </div> the figuretag to my markdown file that contains my portfolio(photogallery.md). 
 if ! grep -q "$(basename "$(pwd)")" ~/jysndabu/photogallery.md; then
