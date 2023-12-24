@@ -88,6 +88,47 @@ RAW and JPEG are two common file formats used in digital photography, each with 
 
 On the other hand, JPEG is a widely used, lossy compression format that undergoes in-camera processing, discarding some image data to reduce file size. This compression makes JPEGs more suitable for storage and sharing, as they are smaller in size and ready-to-share. JPEGs, however, offer limited flexibility in post-processing, and changes to the image can result in a degradation of quality. They have a more limited dynamic range compared to RAW, potentially leading to a loss of detail in highlights and shadows. JPEG is commonly chosen by casual photographers or in situations where storage space is a concern, and the convenience of immediately shareable images is prioritized. The choice between RAW and JPEG often depends on the photographer's workflow, intended use of the images, and preferences regarding post-processing control. Some cameras allow users to shoot in both formats simultaneously, providing a balance between flexibility and convenience.
 
+#### Shooting with Long Exposure
+
+Long exposure photography is a technique in which the camera's shutter is left open for an extended period of time to capture more light and create certain visual effects. This technique is commonly used in various types of photography, including landscapes, nightscapes, and creative photography. Here are some key aspects of long exposure photography:
+
+<link rel='stylesheet' href='/Shutter101/css/photo-tile.css'>
+<div class="gallery">
+	<figure>
+		<img src='/Shutter101/photos/Philippines/img/photo6.jpg' alt='photo6.jpg'>
+	</figure>
+	<figure>
+		<img src='/Shutter101/photos/Portugal/img/photo9.jpg' alt='photo9.jpg'>
+	</figure>
+	<figure>
+		<img src='/Shutter101/photos/Freiburg/img/IMG_3842-1.jpg' alt='IMG_3842-1.jpg'>
+	</figure>
+</div>
+
+* Shutter Speed:\
+		Long exposure typically involves using a slow shutter speed, usually measured in seconds rather than fractions of a second. Common shutter speeds for long exposure shots range from a few seconds to several minutes.
+
+- Tripod:\
+        Because the shutter is open for an extended period, any camera movement can result in a blurry image. To avoid this, photographers use a sturdy tripod to keep the camera stable during the exposure.
+
+- Subjects for Long Exposure:\
+        Long exposure is often used to capture flowing elements such as waterfalls, rivers, or moving clouds. It can also be employed for night photography to capture star trails, cityscapes, and light trails from moving vehicles.
+
+- Neutral Density Filters:\
+        In situations where there is too much light, such as during the day, photographers may use neutral density (ND) filters to reduce the amount of light entering the camera. This allows for longer exposure times without overexposing the image.
+
+- Creative Effects:\
+        Long exposure can produce creative effects, such as smooth and silky water surfaces, streaking lights of passing cars, or surreal cloud movements. It allows photographers to convey the passage of time in a single frame.
+
+- Bulb Mode:\
+        Many cameras have a "Bulb" mode that allows the shutter to remain open for as long as the shutter button is pressed. This mode is useful for exposures longer than the camera's preset shutter speeds.
+
+- Noise Reduction:\
+        Extended exposure times can lead to increased sensor heat, potentially causing digital noise in the image. Some cameras have built-in noise reduction features for long exposures.
+
+- Experimentation:\
+        Long exposure photography often involves experimentation. Photographers may try different shutter speeds and settings to achieve the desired effects. The results can vary based on the chosen subject and lighting conditions.
+
 
 ###### Source: ChatGPT
 ______
