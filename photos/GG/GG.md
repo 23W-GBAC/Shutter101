@@ -1,5 +1,6 @@
 ## GG
 
+
 <link rel='stylesheet' href='/Shutter101/css/photo-tile.css'>
 <div class='gallery'>
 	<figure>
@@ -46,7 +47,7 @@
 		<img src='/Shutter101/photos/GG/img/IMG_5938.jpg' alt='IMG_5938.jpg'>
 		<figcaption>Canon EOS M3, 1/160-sec, f/7.1, ISO160, Canon EF-M 22mm f/2 STM</figcaption>
 	</figure>
-End
+</div>
 
 *[Homepage](README.md)*
 
