@@ -2,6 +2,7 @@
 
 Freiburg im Breisgau, a vibrant university city in southwest Germany’s Black Forest, is known for its temperate climate and reconstructed medieval old town, crisscrossed by picturesque brooks (bächle). In the surrounding highlands, hiking destination Schlossberg hill is linked to Freiburg by a funicular. With a dramatic 116m spire, the Gothic cathedral Freiburg Minster towers over the central square Münsterplatz.
 
+<link rel="stylesheet" href="/Shutter101/css/photo-tile.css">
 <div class="gallery">
 <figure>
 <img src=/Shutter101/photos/Freiburg/img/IMG_3100.jpg alt=IMG_3100.jpg>
