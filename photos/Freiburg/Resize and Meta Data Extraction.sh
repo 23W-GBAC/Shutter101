@@ -39,9 +39,14 @@ for file in *.jpg *.jpeg *.png *.gif *.JPG *.JPEG; do
                 	iso=$(exiftool -ISO $file | awk -F': ' '{print $2}')
                		lensmodel=$(exiftool -LensID $file | awk -F': ' '{print $2}')
 		
-			#Writing the image description using the variables created to the base markdown file for the photogallery. 
-			echo -e "![$file](/Shutter101/photos/$(basename "$(pwd)")/img/$file)\n" >> "$(basename "$(pwd)").md"
-               		echo -e "$model, $lensmodel, $exposuretime-sec, f/$fnumber, ISO$iso\n" >> "$(basename "$(pwd)").md"
+			#Writing the image description using the variables created to the base markdown file for the photogallery.
+			echo -e "<figure>" >> 	$(basename "$(pwd)").md
+			echo -e "<img src="/Shutter101/photos/$(basename "$(pwd)")/img/$file" alt="$file">" >> $(basename "$(pwd)").md
+			echo -e "<figcaption>$model, $exposuretime, $fnumber, $iso, $lensmodel</figcaption>" >> $(basename "$(pwd)").md
+			echo -e "</figure>\n" >> $(basename "$(pwd)").md
+
+			#echo -e "![$file](/Shutter101/photos/$(basename "$(pwd)")/img/$file)\n" >> "$(basename "$(pwd)").md"
+               		#echo -e "$model, $lensmodel, $exposuretime-sec, f/$fnumber, ISO$iso\n" >> "$(basename "$(pwd)").md"
 			echo "Image description of $file extracted." 
 		else 
 			echo "File already processed.Skipping file."
