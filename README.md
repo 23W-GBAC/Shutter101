@@ -92,6 +92,6 @@ On the other hand, JPEG is a widely used, lossy compression format that undergoe
 ###### Source: ChatGPT
 ______
 
-## [My Photo Gallery](PhotoGallery.md)
+## [My Photo Gallery](photogallery.md)
 
 ## [Automation](Automation.md)
