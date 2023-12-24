@@ -608,7 +608,7 @@ graph TD;
     C-->D["Then in the terminal run "sh Resize and Meta Data Extraction with div tag.sh"];
     D-->E["Modify the *Location.md if you would like to add some description to your photogallery"];
     E-->F["Delete all copied(original) photos so that it will not be committed to the repository"];
-    F-->G["Run "direnv allow" in the terminal, for future addition of images"]
+    F-->G["Run "direnv allow" in the terminal, for future addition of images"];
     G-->H["Finally, Push your changes"];
 ```
 
