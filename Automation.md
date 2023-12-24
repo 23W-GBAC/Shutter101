@@ -475,7 +475,7 @@ ______
 
 ### UPDATE 2 | Dec.22, 2023
 
-To answer my previous issue, I combined the previous scripts of resizing and the meta data extraction into one script. This  script (**Resize and Meta Data Extraction.sh**) will be run only once at the beginning when I initially copy my new images. It will also create the necessary markdown files that I will be using later for my portfolio. 
+To answer my previous issue, I combined the previous scripts of resizing and the meta data extraction into one script. This  script (**Resize and Meta Data Extraction with div tag.sh**) will be run only once at the beginning when I initially copy my new images. It will also create the necessary markdown files that I will be using later for my portfolio. I also change the format of my photogallery container, I used html tag like figure and figure tag to customize the layout of the images. There will be two version of my scripts one with pure markdown fomart and the other is with html tags. 
 
 The script is as follows: 
 
@@ -522,9 +522,10 @@ for file in *.jpg *.jpeg *.png *.gif *.JPG *.JPEG; do
                         lensmodel=$(exiftool -LensID $file | awk -F': ' '{print $2}')
 
                         #Writing the image description using the variables created to the base markdown file for the photogallery. 
-                        echo -e "![$file](/Shutter101/photos/$(basename "$(pwd)")/img/$file)\n" >> "$(basename "$(pwd)").md"
-                        echo -e "$model, $lensmodel, $exposuretime-sec, f/$fnumber, ISO$iso\n" >> "$(basename "$(pwd)").md"
-                        echo "Image description of $file extracted." 
+                        echo -e "\t<figure>" >> $(basename "$(pwd)").md
+			echo -e "\t\t<img src='/Shutter101/photos/$(basename "$(pwd)")/img/$file' alt='$file'>" >> $(basename "$(pwd)").md
+			echo -e "\t\t<figcaption>$model, $exposuretime-sec, f/$fnumber, ISO$iso, $lensmodel</figcaption>" >> $(basename "$(pwd)").md
+			echo -e "\t</figure>" >> $(basename "$(pwd)").md
                 else 
                         echo "File already processed.Skipping file."
                 fi
@@ -537,13 +538,12 @@ done
 photocover=$(shuf -n 1 resized_images_list.md)
 
 #Container of Figure tag and Figure Caption.
-figuretag=$"    <figure>\n\t\t<img src='/Shutter101/photos/$(basename "$(pwd)")/img/$photocover' alt='$photocover'>\n\t\t<figcaption><a href='"$(basename "$(pwd)").html'">$(basename "$(pwd)")</a></figcaption>\n\t</figure>"
+figuretag=$"	<figure>\n\t\t<img src='/Shutter101/photos/$(basename "$(pwd)")/img/$photocover' alt='$photocover'>\n\t\t<figcaption><a href='/Shutter101/photos/$(basename "$(pwd)")/$(basename "$(pwd)").html'>$(basename "$(pwd)")</a></figcaption>\n\t</figure>"
 
 #Append before the </div> the figuretag to my markdown file that contains my portfolio(photogallery.md). 
 if ! grep -q "$(basename "$(pwd)")" ~/jysndabu/photogallery.md; then
         sed  -i "/<\/div>/i $figuretag" ~/jysndabu/photogallery.md
         #Write the ending part  for the photogallery. 
-        echo -e "End\n" >> $(basename "$(pwd)").md
         echo -e "*[Homepage](README.md)*\n" >>  $(basename "$(pwd)").md
         echo -e "*[Bact to Repository](https://github.com/23W-GBAC/Shutter101/tree/main)*\n" >> $(basename "$(pwd)").md
 else
@@ -552,7 +552,7 @@ fi
 ```
 
 
-The next script (**AddAdditionalImages.sh**) will be use as **.envrc file**. The purpose of this is to check everytime I enter the folder if new images are added. If there are new images, it will resize and extract the meta data of the image then revise the respective markdown files.  But be sure that **direnv allow** is turn on to  the desired directory for this script to work. 
+The next script (**AddAdditionalImageswithdivtag.sh**) will through **.envrc**. The purpose of this is to check everytime I enter the folder if new images are added. If there are new images, it will resize and extract the meta data of the image then revise the respective markdown files.  But be sure that **direnv allow** is turn on to  the desired directory for this script to work. 
 
 
 ```
@@ -577,7 +577,7 @@ for file in *.jpg *.jpeg *.png *.gif *.JPG *.JPEG; do
                         iso=$(exiftool -ISO $file | awk -F': ' '{print $2}')
                         lensmodel=$(exiftool -LensID $file | awk -F': ' '{print $2}')
 
-                        imagedescription="![$file](/Shutter101/photos/$(basename "$(pwd)")/img/$file)\n$model, $lensmodel, $exposuretime-sec, f/$fnumber, ISO$iso\n"
+                        imagedescription="<figure>\n\t<img src='/Shutter101/photos/$(basename "$(pwd)")/img/$file' alt='$file'>\n\t<figcaption>$model, $exposuretime-sec, f/$fnumber, ISO$iso, $lensmodel</figcaption>\n</figure>"
 
                         #Insert the description before the word "END" in the photogallery.md. 
                         sed  -i "/End/i $imagedescription" "$(basename "$(pwd)").md"
@@ -587,9 +587,6 @@ for file in *.jpg *.jpeg *.png *.gif *.JPG *.JPEG; do
                 fi
         fi
 done
-
-#Replace the markdown file for the image container in the main page. 
-cp $(basename "$(pwd)").md ~/jysndabu/
 ```
 
 ##### My request for everyone. 
@@ -607,13 +604,41 @@ This is a flow chart that will serve  as a guide on how would you proceed on try
 ```mermaid
 graph TD;
     A["Create a folder with a name base on the location of youre photos in ~/jysndabu/photos/"]--> B[Copy the photos you would like to share in the folder you created]
-    B-->C["Copy the Resize and Meta Data Extraction.sh and .envrc from ~/jysndabu/Script to the folder you created."];
-    C-->D["Run this in the terminal: chmod +x Resize and Meta Data Extraction.sh"];
-    D-->E["Then run ./Resize and Meta Data Extraction.sh"];
-    E-->F["Modify the *Location.md if you would like to add some description to your photogallery"];
-    F-->G["Copy the *Location.md to ~/jysndabu/"];
-    G-->H["Delete all copied(original) photos so that it will not be committed to the repository"];
-    H-->I["Finally, Push your changes"];
+    B-->C["Copy the script  "Resize and Meta Data Extraction with div tag.sh" and ".envrc" from ~/jysndabu/Script to the folder you created."];
+    C-->D["Then in the terminal run "sh Resize and Meta Data Extraction with div tag.sh"];
+    D-->E["Modify the *Location.md if you would like to add some description to your photogallery"];
+    E-->F["Delete all copied(original) photos so that it will not be committed to the repository"];
+    F-->G["Run "direnv allow" in the terminal, for future addition of images"]
+    G-->H["Finally, Push your changes"];
+```
+
+The result should be like this:
+
+```
+## GG
+
+<link rel='stylesheet' href='/Shutter101/css/photo-tile.css'>
+<div class='gallery'>
+	<figure>
+		<img src='/Shutter101/photos/GG/img/IMG_3206-2.jpg' alt='IMG_3206-2.jpg'>
+		<figcaption>Canon EOS M3, 1/250-sec, f/2.8, ISO320, Canon EF-M 22mm f/2 STM</figcaption>
+	</figure>
+	<figure>
+		<img src='/Shutter101/photos/GG/img/IMG_3494-2.jpg' alt='IMG_3494-2.jpg'>
+		<figcaption>Canon EOS M3, 1/500-sec, f/4.0, ISO200, Canon EF-M 22mm f/2 STM</figcaption>
+	</figure>
+	<figure>
+		<img src='/Shutter101/photos/GG/img/IMG_3528.jpg' alt='IMG_3528.jpg'>
+		<figcaption>Canon EOS M3, 1/250-sec, f/4.0, ISO200, Canon EF-M 22mm f/2 STM</figcaption>
+	</figure>
+	<figure>
+		<img src='/Shutter101/photos/GG/img/IMG_3718.jpg' alt='IMG_3718.jpg'>
+		<figcaption>Canon EOS M3, 1/500-sec, f/9.0, ISO200, Canon EF-M 22mm f/2 STM</figcaption>
+	</figure>
+
+*[Homepage](README.md)*
+
+*[Bact to Repository](https://github.com/23W-GBAC/Shutter101/tree/main)*
 ```
 
 *\*Location refers to the name of created folder*
