@@ -27,6 +27,10 @@ Details like aperture, shutter speed, and ISO reveal the technical choices made 
 		<img src='/Shutter101/photos/ÖschinenseeLake/img/IMG_4990.jpg' alt='IMG_4990.jpg'>
 		<figcaption><a href="/Shutter101/photos/ÖschinenseeLake/ÖschinenseeLake.html">ÖschinenseeLake</a></figcaption>
 	</figure>
+	<figure>
+		<img src='/Shutter101/photos/GG/img/IMG_5938.jpg' alt='IMG_5938.jpg'>
+		<figcaption><a href='/Shutter101/photos/GG/GG.html'>GG</a></figcaption>
+	</figure>
 	<figure>		
 		<img src="/Shutter101/photos/Simbach/img/photo3.jpg" alt="Photo3">
 		<figcaption><a href="/Shutter101/photos/Simbach/Simbach.html">DE: Simbach am Inn</a></figcaption>
@@ -38,10 +42,6 @@ Details like aperture, shutter speed, and ISO reveal the technical choices made 
 	<figure>		
 		<img src="/Shutter101/photos/Burghausen/img/20231210165720_IMG_8550.JPG" alt="20231210165720_IMG_8550">
 		<figcaption><a href="/Shutter101/photos/Burghausen/Burghausen.html">DE: Burghausen</a></figcaption>
-	</figure>
-<figure>
-		<img src='/Shutter101/photos/GG/img/IMG_5938.jpg' alt='IMG_5938.jpg'>
-		<figcaption><a href='/Shutter101/photos/GG/GG.html'>GG</a></figcaption>
 	</figure>
 </div>
 
