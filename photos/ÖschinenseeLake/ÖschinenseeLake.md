@@ -46,6 +46,6 @@ Experience the untouched beauty of nature at Oeschinensee in the Swiss Alps Jung
 	</figure>
 </div>
 
-*[Homepage](/Shutter101/README.md)*
+*[Homepage](/Shutter101/README.html)*
 
 *[Bact to Repository](https://github.com/23W-GBAC/Shutter101/tree/main)*
