@@ -601,6 +601,13 @@ But make sure that exiftool and imagemagick is installed to your machine.
 
 This is a flow chart that will serve  as a guide on how would you proceed on trying my script.
 
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@12/dist/mermaid.esm.min.mjs';
+
+    // Initialize Mermaid
+    mermaid.initialize({ startOnLoad: true });
+</script>
+
 ```mermaid
 graph TD;
     A["Create a folder with a name base on the location of youre photos in ~/jysndabu/photos/"]--> B[Copy the photos you would like to share in the folder you created]
