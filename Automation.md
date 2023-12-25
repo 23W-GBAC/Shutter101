@@ -601,12 +601,7 @@ But make sure that exiftool and imagemagick is installed to your machine.
 
 This is a flow chart that will serve  as a guide on how would you proceed on trying my script.
 
-<script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@12/dist/mermaid.esm.min.mjs';
-
-    // Initialize Mermaid
-    mermaid.initialize({ startOnLoad: true });
-</script>
+<script src="/Shutter101/mermaid.js"></script>
 
 ```mermaid
 graph TD;
