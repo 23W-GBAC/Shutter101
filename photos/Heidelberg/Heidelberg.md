@@ -43,6 +43,6 @@ Heidelberg is a town on the Neckar River in southwestern Germany. It’s known f
 </div>
 
 
-*[Homepage](/Shutter101/README.md)*
+*[Homepage](/Shutter101/README.html)*
 
 *[Bact to Repository](https://github.com/23W-GBAC/Shutter101/tree/main)*
