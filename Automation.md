@@ -604,11 +604,11 @@ This is a flow chart that will serve  as a guide on how would you proceed on try
 ```mermaid
 graph TD;
     A["Create a folder with a name base on the location of youre photos in ~/jysndabu/photos/"]--> B[Copy the photos you would like to share in the folder you created]
-    B-->C["Copy the script  "Resize and Meta Data Extraction with div tag.sh" and ".envrc" from ~/jysndabu/Script to the folder you created."];
-    C-->D["Then in the terminal run "sh Resize and Meta Data Extraction with div tag.sh"];
+    B-->C["Copy the script  'Resize and Meta Data Extraction with div tag.sh' and '.envrc' from ~/jysndabu/Script to the folder you created."];
+    C-->D["Then in the terminal run 'sh Resize and Meta Data Extraction with div tag.sh'"];
     D-->E["Modify the *Location.md if you would like to add some description to your photogallery"];
     E-->F["Delete all copied(original) photos so that it will not be committed to the repository"];
-    F-->G["Run "direnv allow" in the terminal, for future addition of images"];
+    F-->G["Run 'direnv allow' in the terminal, for future addition of images"];
     G-->H["Finally, Push your changes"];
 ```
 
