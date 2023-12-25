@@ -45,6 +45,6 @@ The “Pearl of the Salzach” Burghausen on the Bavarian-Austrian border is an 
 </div>
 
 
-*[Homepage](/Shutter101/README.md)*
+*[Homepage](/Shutter101/README.html)*
 
 *[Bact to Repository](https://github.com/23W-GBAC/Shutter101/tree/main)*
