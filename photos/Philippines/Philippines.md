@@ -133,6 +133,6 @@ Philippines, island country of Southeast Asia in the western Pacific Ocean. It i
 </figure>
 </div>
 
-*[Homepage](/Shutter101/README.md)*
+*[Homepage](/Shutter101/README.html)*
 
 *[Bact to Repository](https://github.com/23W-GBAC/Shutter101/tree/main)*
