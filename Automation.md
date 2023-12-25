@@ -473,7 +473,7 @@ And that would be my task for next week.
 
 ______
 
-### UPDATE 2 | Dec.22, 2023
+### UPDATE 3 | Dec.22, 2023
 
 To answer my previous issue, I combined the previous scripts of resizing and the meta data extraction into one script. This  script (**Resize and Meta Data Extraction with div tag.sh**) will be run only once at the beginning when I initially copy my new images. It will also create the necessary markdown files that I will be using later for my portfolio. I also change the format of my photogallery container, I used html tag like figure and figure tag to customize the layout of the images. There will be two version of my scripts one with pure markdown fomart and the other is with html tags. 
 
