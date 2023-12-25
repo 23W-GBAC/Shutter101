@@ -602,7 +602,7 @@ But make sure that exiftool and imagemagick is installed to your machine.
 This is a flow chart that will serve  as a guide on how would you proceed on trying my script.
 
 <script src="/Shutter101/mermaid.js"></script>
-
+<div class="mermaid">
 ```mermaid
 graph TD;
     A["Create a folder with a name base on the location of youre photos in ~/jysndabu/photos/"]--> B[Copy the photos you would like to share in the folder you created]
@@ -613,6 +613,7 @@ graph TD;
     F-->G["Run "direnv allow" in the terminal, for future addition of images"];
     G-->H["Finally, Push your changes"];
 ```
+</div>
 
 The result should be like this:
 
