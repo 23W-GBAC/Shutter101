@@ -42,6 +42,6 @@ Freiburg im Breisgau, a vibrant university city in southwest Germany’s Black F
 	</figure>
 </div>
 
-*[Homepage](/Shutter101/README.md)*
+*[Homepage](/Shutter101/README.html)*
 
 *[Bact to Repository](https://github.com/23W-GBAC/Shutter101/tree/main)*
