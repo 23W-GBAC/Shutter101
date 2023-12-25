@@ -88,6 +88,8 @@ RAW and JPEG are two common file formats used in digital photography, each with 
 
 On the other hand, JPEG is a widely used, lossy compression format that undergoes in-camera processing, discarding some image data to reduce file size. This compression makes JPEGs more suitable for storage and sharing, as they are smaller in size and ready-to-share. JPEGs, however, offer limited flexibility in post-processing, and changes to the image can result in a degradation of quality. They have a more limited dynamic range compared to RAW, potentially leading to a loss of detail in highlights and shadows. JPEG is commonly chosen by casual photographers or in situations where storage space is a concern, and the convenience of immediately shareable images is prioritized. The choice between RAW and JPEG often depends on the photographer's workflow, intended use of the images, and preferences regarding post-processing control. Some cameras allow users to shoot in both formats simultaneously, providing a balance between flexibility and convenience.
 
+###### <mark>Dec.25, 2023 | WEEK 3</mark> 
+
 #### Shooting with Long Exposure
 
 Long exposure photography is a technique in which the camera's shutter is left open for an extended period of time to capture more light and create certain visual effects. This technique is commonly used in various types of photography, including landscapes, nightscapes, and creative photography. Here are some key aspects of long exposure photography:
