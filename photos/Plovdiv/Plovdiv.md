@@ -71,6 +71,6 @@ It was taken by the Roman Empire in the first century and became an important hu
 </div>
 
 
-*[Homepage](README.md)*
+*[Homepage](/Shutter101/README.md)*
 
 *[Bact to Repository](https://github.com/23W-GBAC/Shutter101/tree/main)*
