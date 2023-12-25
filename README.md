@@ -95,7 +95,7 @@ Long exposure photography is a technique in which the camera's shutter is left o
 <link rel='stylesheet' href='/Shutter101/css/photo-tile.css'>
 <div class="gallery">
 	<figure>
-		<img src='/Shutter101/photos/ReadmeResources/img/IMG_6793-2.jpg' alt='photo1'>
+		<img src='/Shutter101/photos/ReadmeResources/img/photo4.jpg' alt='photo4'>
 	</figure>
 	<figure>
 		<img src='/Shutter101/photos/ReadmeResources/img/IMG_0846.jpg' alt='photo2'>
