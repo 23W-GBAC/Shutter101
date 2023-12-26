@@ -475,9 +475,24 @@ ______
 
 ### UPDATE 3 | Dec.22, 2023
 
+##### Automatic Insertion of Newly Added Image Collection to the Photo Gallery and Automatic Selection of the Photo Thumbnail.  
+
 To answer my previous issue, I combined the previous scripts of resizing and the meta data extraction into one script. This  script (**Resize and Meta Data Extraction with div tag.sh**) will be run only once at the beginning when I initially copy my new images. It will also create the necessary markdown files that I will be using later for my portfolio. I also change the format of my photogallery container, I used html tag like figure and figure tag to customize the layout of the images. There will be two version of my scripts one with pure markdown fomart and the other is with html tags. 
 
-The script is as follows: 
+In addition to that, I have also included a feature where it will also automatically insert the new collection to my [photogallery](https://23w-gbac.github.io/Shutter101/photogallery.html) by using **grep** and **sed**. Grep will ceck if the collection is already in the photo gallery if not then it will run sed. Sed will then search my insertion point which will be the "</div>", it will insert the new figure tag before the </div>. 
+
+```
+figuretag=$"	<figure>\n\t\t<img src='/Shutter101/photos/$(basename "$(pwd)")/img/$photocover' alt='$photocover'>\n\t\t<figcaption><a href='/Shutter101/photos/$(basename "$(pwd)")/$(basename "$(pwd)").html'>$(basename "$(pwd)")</a></figcaption>\n\t</figure>"
+
+if ! grep -q "$(basename "$(pwd)")" ~/jysndabu/photogallery.md; then
+        sed  -i "/<\/div>/i $figuretag" ~/jysndabu/photogallery.md
+```
+
+And I also use **shuf** for the automatic selection of the photo cover for that collection. It will shuffle the images from the given list then select the first item in the list. But if I have a desired covered photo, of course I sill need to maually select that image. 
+
+`photocover=$(shuf -n 1 resized_images_list.md)`
+
+The [full script](https://github.com/23W-GBAC/Shutter101/tree/main/Script) is as follows: 
 
 ```
 #Create folder container (img) for resized images, markdown file for master list of resized images and a base MD file for the photogallery. 
@@ -594,6 +609,8 @@ done
 I am requesting for someone to try my script by adding your photos in my blog. Forked it, add new branch, add the images then run the script in your machine. 
 But make sure that exiftool and imagemagick is installed to your machine. 
 
+For Ubuntu users: 
+
 `sudo apt install imagemagick`
 
 `sudo apt install exiftool`
@@ -611,7 +628,7 @@ graph TD;
     F-->G["Run 'direnv allow' in the terminal, for future addition of images"];
     G-->H["Finally, Push your changes"];
 ```
-
+*\*Location refers to the name of created folder*
 
 The result should be like this:
 
@@ -642,7 +659,7 @@ The result should be like this:
 *[Bact to Repository](https://github.com/23W-GBAC/Shutter101/tree/main)*
 ```
 
-*\*Location refers to the name of created folder*
+I also need some feedback regarding with my code as you can see I have used a lot of conditional statements if and else. I can ommit these if and else statement but making sure that the script will be run only once because it you run it again and  it will just continue to add the images without checking if they are already in the photo gallery. 
 
 *If you encounter a problem doing this or something is not right, please don't hesitate to contact me.*
 
