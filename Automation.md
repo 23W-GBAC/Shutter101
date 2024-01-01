@@ -475,9 +475,9 @@ ______
 
 ### UPDATE 3 | Dec.22, 2023
 
-##### Automatic Insertion of Newly Added Image Collection to the Photo Gallery and Automatic Selection of the Photo Thumbnail.  
+##### ORGANIZE AUTOMATICALLY NEWLY ADDED COLLECTION OF IMAGES INCLUDING AUTOMATIC SELECTING OF THE THUMBNAIL.
 
-To answer my previous issue, I combined the previous scripts of resizing and the meta data extraction into one script. This  script (**Resize and Meta Data Extraction with div tag.sh**) will be run only once at the beginning when I initially copy my new images. It will also create the necessary markdown files that I will be using later for my portfolio. I also change the format of my photogallery container, I used html tag like figure and figure tag to customize the layout of the images. There will be two version of my scripts one with pure markdown fomart and the other is with html tags. 
+To answer my previous issue, I poslished and combined the previous scripts of resizing and the meta data extraction into one script. This  script (**Resize and Meta Data Extraction with div tag.sh**) will be run only once at the beginning when I initially copy my new images. It will also create the necessary markdown files that I will be using later for my portfolio. I also change the format of my photogallery container, I used html tag like figure and figure tag to customize the layout of the images. There will be two version of my scripts one with pure markdown fomart and the other is with html tags.
 
 In addition to that, I have also included a feature where it will also automatically insert the new collection to my [photogallery](https://23w-gbac.github.io/Shutter101/photogallery.html) by using **grep** and **sed**. Grep will ceck if the collection is already in the photo gallery if not then it will run sed. Sed will then search my insertion point which will be the "</div>", it will insert the new figure tag before the </div>. 
 
@@ -604,7 +604,7 @@ for file in *.jpg *.jpeg *.png *.gif *.JPG *.JPEG; do
 done
 ```
 
-##### My request for everyone. 
+##### MY REQUEST TO EVERYONE
 
 I am requesting for someone to try my script by adding your photos in my blog. Forked it, add new branch, add the images then run the script in your machine. 
 But make sure that exiftool and imagemagick is installed to your machine. 
@@ -666,8 +666,173 @@ I also need some feedback regarding with my code as you can see I have used a lo
 ______
 
 
+### UPDATE 4 | Jan. 1, 2024
+
+##### FILE HANDLING OF IMAGES --> CAMERA TO LAPTOP --> ONLY COPY IMAGES THAT ARE MARKED.
+
+When I do photography, most of the time I ended up with hundreds of images at the end of the day. Then going back to my place, I try to mark the images that are worth editing. If for example I took 700+ images maybe 50 or 100 from that list will only be imported to Adobe Lightroom software. Normally what I do is I import all images to the Adobe Lightroom (Desktop Version) and filter the images that are marked or starred. Here is what I mean by marking the photo:
+
+![StarredPhoto](~/jysndabu/photos/ReadmeResources/CameraUI.jpg)
+
+Now that I am using Linux based OS, I am using the web version of Adobe Lightroom which the features are limited and filterring the images is gone so I need to manually checked each images on my camera which are marked then seperate those images for import to Lightroom. Which is quite boring and time consuming, imagine if you have over a thousand of images and you have to check again all images if which are marked.  That is exhausting right? And because I have already explored the METADATA why not use this again to filter the images. In addition to this, I want also to speed up the process of getting those images straight away from my camera SD card without copying all images to my laptop.
+
+Using BASH scripting again, I will create a script which I will copy to my camera memory card. Running this script will iterate again through all images from the current directory if meeting the condition it will copy this image to my designated location in my laptop.
+
+
+```
+#Iterate to each images in the current directory.
+for file in *.CR3; do
+
+        #Using exiftool for getting the "Rating" of ech images then using awk to get the value only.
+        rating=$(exiftool -Rating "$file" | awk -F': ' '{print $2}')
+
+        #Check if it is working, this can be removed.
+        echo "File: $file, Rating: $rating"
+
+        #Check the Rating of the image if it is not zero then copy the image.
+        if [[ "$rating" != "0" ]]; then
+
+            #Check if it is working, this can be removed.
+            echo "Copying $file to ~/Pictures/StarredImages/"
+
+            #Copy image to my designated folder
+            cp "$file" ~/Pictures/StarredImages/
+        fi
+done
+
+```
+
+Here is my example of using this script:
+
+I have 36 images in a folder. Not all of them are starred. We will check if how many are starred. If marked Rating should have a value other than 0.
+
+![Photo1](~/jysndabu/photos/ReadmeResources/Sample1.png)
+
+Running `exiftool -Rating *` will result to these:
+
+![Photo2](~/jysndabu/photos/ReadmeResources/Sample2.png)
+
+```
+======== IMG_9110.CR3
+Rating                          : 1
+======== IMG_9111.CR3
+Rating                          : 0
+======== IMG_9112.CR3
+Rating                          : 1
+======== IMG_9113.CR3
+Rating                          : 0
+======== IMG_9119.CR3
+Rating                          : 0
+======== IMG_9120.CR3
+Rating                          : 0
+======== IMG_9121.CR3
+Rating                          : 0
+======== IMG_9122.CR3
+Rating                          : 0
+======== IMG_9128.CR3
+Rating                          : 1
+======== IMG_9129.CR3
+Rating                          : 1
+======== IMG_9130.CR3
+Rating                          : 0
+======== IMG_9131.CR3
+Rating                          : 0
+======== IMG_9137.CR3
+Rating                          : 1
+======== IMG_9138.CR3
+Rating                          : 1
+======== IMG_9139.CR3
+Rating                          : 0
+======== IMG_9140.CR3
+Rating                          : 1
+======== IMG_9146.CR3
+Rating                          : 0
+======== IMG_9147.CR3
+Rating                          : 0
+======== IMG_9148.CR3
+Rating                          : 0
+======== IMG_9149.CR3
+Rating                          : 0
+======== IMG_9155.CR3
+Rating                          : 1
+======== IMG_9156.CR3
+Rating                          : 1
+======== IMG_9157.CR3
+Rating                          : 1
+======== IMG_9158.CR3
+Rating                          : 0
+======== IMG_9164.CR3
+Rating                          : 0
+======== IMG_9165.CR3
+Rating                          : 0
+======== IMG_9166.CR3
+Rating                          : 0
+======== IMG_9167.CR3
+Rating                          : 0
+======== IMG_9176.CR3
+Rating                          : 0
+======== IMG_9177.CR3
+Rating                          : 0
+======== IMG_9178.CR3
+Rating                          : 0
+======== IMG_9181.CR3
+Rating                          : 0
+======== IMG_9192.CR3
+Rating                          : 0
+======== IMG_9193.CR3
+Rating                          : 0
+======== IMG_9194.CR3
+Rating                          : 0
+======== IMG_9195.CR3
+Rating                          : 0
+   36 image files read
+```
+
+Checking each you could see that 10 out of 36 are starred/marked. After this I will run `sh copystarredfiles.sh`:
+
+![Photo3](~/jysndabu/photos/ReadmeResources/Sample3.png)
+
+Those 11 images are copied to my designated folder.
+
+![Photo4](~/jysndabu/photos/ReadmeResources/Sample4.png)
+
+______
+
+Using ChatGPT I asked for a Python counterpart of my code the result is this:
+
+```
+import os
+import shutil
+from subprocess import check_output
+
+source_folder = "."  # Change this to the path of your source folder
+destination_folder = "~/Pictures/StarredImages/"
+
+# Only consider CR3 files
+image_extensions = [".CR3"]
+
+for filename in os.listdir(source_folder):
+    if any(filename.lower().endswith(ext) for ext in image_extensions):
+        file_path = os.path.join(source_folder, filename)
+
+        # Use subprocess to run exiftool command
+        rating = check_output(["exiftool", "-Rating", file_path], universal_newlines=True).strip()
+        rating = rating.split(": ")[1] if rating.startswith("Rating") else None
+
+        if rating == "1":
+            # Copy the file to the destination folder
+            shutil.copy(file_path, os.path.expanduser(destination_folder))
+            print(f"Copying {filename} to {destination_folder}")
+```
+
+Base on the result I would prefer using the BASH instead of Python, my script consist of only of 6 lines of code instead of 14. If you will create this Python code, how would be your approach?
+
+______
+
+## END OF MY AUTOMATION PROJECT
+
+
 *[Homepage](README.md)*
 
 *[Bact to Repository](https://github.com/23W-GBAC/Shutter101/tree/main)*
-
 
