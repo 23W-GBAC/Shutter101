@@ -616,18 +616,18 @@ For Ubuntu users:
 `sudo apt install exiftool`
 
 
-This is a flow chart that will serve  as a guide on how would you proceed on trying my script.
+For those who wnat to try, here is a simple  guide on how would you proceed on using the script.
 
-```mermaid
-graph TD;
-    A["Create a folder with a name base on the location of youre photos in ~/jysndabu/photos/"]--> B[Copy the photos you would like to share in the folder you created]
-    B-->C["Copy the script  'Resize and Meta Data Extraction with div tag.sh' and '.envrc' from ~/jysndabu/Script to the folder you created."];
-    C-->D["Then in the terminal run 'sh Resize and Meta Data Extraction with div tag.sh'"];
-    D-->E["Modify the *Location.md if you would like to add some description to your photogallery"];
-    E-->F["Delete all copied(original) photos so that it will not be committed to the repository"];
-    F-->G["Run 'direnv allow' in the terminal, for future addition of images"];
-    G-->H["Finally, Push your changes"];
-```
+1. Create a folder with a name base on the location of youre photos in ~/jysndabu/photos/
+2. Copy the photos you would like to share in the folder you created
+3. Copy the script  'Resize and Meta Data Extraction with div tag.sh' and '.envrc' from ~/jysndabu/Script to the folder you created
+4. Then in the terminal run 'sh Resize and Meta Data Extraction with div tag.sh'
+5. Modify the *Location.md if you would like to add some description to your photogallery
+6. Delete all copied(original) photos so that it will not be committed to the repository
+7. Run 'direnv allow' in the terminal, for future addition of images
+8. Finally, push your changes
+
+
 *\*Location refers to the name of created folder*
 
 The result should be like this:
