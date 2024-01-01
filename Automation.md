@@ -787,15 +787,16 @@ Rating                          : 0
    36 image files read
 ```
 
-Checking each you could see that 10 out of 36 are starred/marked. After this I will run `sh copystarredfiles.sh`:
+Checking the result would tell us that 10 out of 36 are starred/marked. After this I will run `sh copystarredfiles.sh`:
 
 ![Photo3](/Shutter101/photos/ReadmeResources/Sample3.png)
 
-Those 11 images are copied to my designated folder.
+Those 10 images are copied to my designated folder.
 
 ![Photo4](/Shutter101/photos/ReadmeResources/Sample4.png)
 
-**The code is working.**
+**The code is working**
+
 ______
 
 Using ChatGPT I asked for a Python counterpart of my code the result is this:
@@ -828,6 +829,7 @@ for filename in os.listdir(source_folder):
 Base on the result I would prefer using the BASH instead of Python, my script consist of only of 6 lines of code instead of 14. If you will create this Python code, how would be your approach?
 
 ______
+
 
 ## END OF MY AUTOMATION PROJECT
 
