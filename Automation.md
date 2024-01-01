@@ -676,21 +676,20 @@ When I do photography, most of the time I ended up with hundreds of images at th
 
 Now that I am using Linux based OS, I am using the web version of Adobe Lightroom which the features are limited and filterring the images is gone so I need to manually checked each images on my camera which are marked then seperate those images for import to Lightroom. Which is quite boring and time consuming, imagine if you have over a thousand of images and you have to check again all images if which are marked.  That is exhausting right? And because I have already explored the METADATA why not use this again to filter the images. In addition to this, I want also to speed up the process of getting those images straight away from my camera SD card without copying all images to my laptop.
 
-Using BASH scripting again, I will create a script which I will copy to my camera memory card. Running this script will iterate again through all images from the current directory if meeting the condition it will copy this image to my designated location in my laptop.
-
+Using BASH scripting again, I will create a script which I will copy to my camera memory card. Running this script will iterate again through all images from the current directory, if meeting the condition,  it will copy this image to my designated location in my laptop. Here is the [script](/Shutter101/Script/copystarredfiles.sh). I will be using again ***EXIFTOOL*** and ***AWK*** for this automation. 
 
 ```
 #Iterate to each images in the current directory.
 for file in *.CR3; do
 
-        #Using exiftool for getting the "Rating" of ech images then using awk to get the value only.
+        #Using exiftool for getting the "Rating" of each images then passing to awk to get the numerical value only.
         rating=$(exiftool -Rating "$file" | awk -F': ' '{print $2}')
 
         #Check if it is working, this can be removed.
         echo "File: $file, Rating: $rating"
 
-        #Check the Rating of the image if it is not zero then copy the image.
-        if [[ "$rating" != "0" ]]; then
+        #Check the rating of the image, Starred images should shoukd have a rating of 1.
+        if [[ "$rating" == "1" ]]; then
 
             #Check if it is working, this can be removed.
             echo "Copying $file to ~/Pictures/StarredImages/"
@@ -704,7 +703,7 @@ done
 
 Here is my example of using this script:
 
-I have 36 images in a folder. Not all of them are starred. We will check if how many are starred. If marked Rating should have a value other than 0.
+I have 36 images in a folder. Not all of them are starred. We will check if how many are starred. If starred, then the rating should have a value of 1. 
 
 ![Photo1](/Shutter101/photos/ReadmeResources/Sample1.png)
 
@@ -796,6 +795,7 @@ Those 11 images are copied to my designated folder.
 
 ![Photo4](/Shutter101/photos/ReadmeResources/Sample4.png)
 
+**The code is working.**
 ______
 
 Using ChatGPT I asked for a Python counterpart of my code the result is this:
