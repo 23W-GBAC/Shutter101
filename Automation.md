@@ -672,7 +672,7 @@ ______
 
 When I do photography, most of the time I ended up with hundreds of images at the end of the day. Then going back to my place, I try to mark the images that are worth editing. If for example I took 700+ images maybe 50 or 100 from that list will only be imported to Adobe Lightroom software. Normally what I do is I import all images to the Adobe Lightroom (Desktop Version) and filter the images that are marked or starred. Here is what I mean by marking the photo:
 
-![StarredPhoto](~/jysndabu/photos/ReadmeResources/CameraUI.jpg)
+![StarredPhoto](/Shutter101/photos/ReadmeResources/CameraUI.jpg)
 
 Now that I am using Linux based OS, I am using the web version of Adobe Lightroom which the features are limited and filterring the images is gone so I need to manually checked each images on my camera which are marked then seperate those images for import to Lightroom. Which is quite boring and time consuming, imagine if you have over a thousand of images and you have to check again all images if which are marked.  That is exhausting right? And because I have already explored the METADATA why not use this again to filter the images. In addition to this, I want also to speed up the process of getting those images straight away from my camera SD card without copying all images to my laptop.
 
@@ -706,11 +706,11 @@ Here is my example of using this script:
 
 I have 36 images in a folder. Not all of them are starred. We will check if how many are starred. If marked Rating should have a value other than 0.
 
-![Photo1](~/jysndabu/photos/ReadmeResources/Sample1.png)
+![Photo1](/Shutter101/photos/ReadmeResources/Sample1.png)
 
 Running `exiftool -Rating *` will result to these:
 
-![Photo2](~/jysndabu/photos/ReadmeResources/Sample2.png)
+![Photo2](/Shutter101/photos/ReadmeResources/Sample2.png)
 
 ```
 ======== IMG_9110.CR3
@@ -790,11 +790,11 @@ Rating                          : 0
 
 Checking each you could see that 10 out of 36 are starred/marked. After this I will run `sh copystarredfiles.sh`:
 
-![Photo3](~/jysndabu/photos/ReadmeResources/Sample3.png)
+![Photo3](/Shutter101/photos/ReadmeResources/Sample3.png)
 
 Those 11 images are copied to my designated folder.
 
-![Photo4](~/jysndabu/photos/ReadmeResources/Sample4.png)
+![Photo4](/Shutter101/photos/ReadmeResources/Sample4.png)
 
 ______
 
