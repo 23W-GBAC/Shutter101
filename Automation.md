@@ -791,11 +791,11 @@ Checking the result would tell us that 10 out of 36 are starred/marked. After th
 
 ![Photo3](/Shutter101/photos/ReadmeResources/Sample3.png)
 
-Those 10 images are copied to my designated folder.
+Those 10 images are copied to my designated folder and ready to be imported to Adobe Lightroom. 
 
 ![Photo4](/Shutter101/photos/ReadmeResources/Sample4.png)
 
-**The code is working**
+**The code is working.**
 
 ______
 
