@@ -54,6 +54,6 @@ Porto is a coastal city in northwest Portugal known for its stately bridges and 
 	</figure>
 </div>
 
-*[Homepage](/Shutter101/README.html)*
+*[Homepage](https://23w-gbac.github.io/Shutter101/)*
 
 *[Bact to Repository](https://github.com/23W-GBAC/Shutter101/tree/main)*
