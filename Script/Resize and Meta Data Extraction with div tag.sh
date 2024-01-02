@@ -68,7 +68,7 @@ figuretag=$"	<figure>\n\t\t<img src='/Shutter101/photos/$(basename "$(pwd)")/img
 if ! grep -q "$(basename "$(pwd)")" ~/jysndabu/photogallery.md; then
 	sed  -i "/<\/div>/i $figuretag" ~/jysndabu/photogallery.md
 	#Write the ending part  for the photogallery. 
-	echo -e "*[Homepage](/Shutter101/README.md)*\n" >>  $(basename "$(pwd)").md
+	echo -e "*[Homepage](https://23w-gbac.github.io/Shutter101/)*\n" >>  $(basename "$(pwd)").md
 	echo -e "*[Bact to Repository](https://github.com/23W-GBAC/Shutter101/tree/main)*\n" >> $(basename "$(pwd)").md
 else
     echo "Already in photo gallery container."
