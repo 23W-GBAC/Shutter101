@@ -49,12 +49,12 @@ Freiburg im Breisgau, a vibrant university city in southwest Germany’s Black F
 	<figcaption>Canon EOS M50, 1/1000-sec, f/1.4, ISO100, Sigma 56mm f/1.4 DC DN | C</figcaption>
 </figure>
 <figure>
-	<img src='/Shutter101/photos/Freiburg/img/IMG_8722-2.jpg' alt='IMG_8722-2.jpg'>
-	<figcaption>Canon EOS M50, 1/400-sec, f/5.6, ISO125, Canon EF-M 15-45mm f/3.5-6.3 IS STM</figcaption>
-</figure>
-<figure>
 	<img src='/Shutter101/photos/Freiburg/img/IMG_8738.jpg' alt='IMG_8738.jpg'>
 	<figcaption>Canon EOS M50, 1/2000-sec, f/3.5, ISO400, Sigma 56mm f/1.4 DC DN | C</figcaption>
+</figure>
+<figure>
+	<img src='/Shutter101/photos/Freiburg/img/IMG_8722-2.jpg' alt='IMG_8722-2.jpg'>
+	<figcaption>Canon EOS M50, 1/400-sec, f/5.6, ISO125, Canon EF-M 15-45mm f/3.5-6.3 IS STM</figcaption>
 </figure>
 <figure>
 	<img src='/Shutter101/photos/Freiburg/img/IMG_8766.jpg' alt='IMG_8766.jpg'>
