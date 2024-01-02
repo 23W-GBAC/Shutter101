@@ -60,6 +60,6 @@ In Simbach it is very good to live and work. Our guests also feel comfortable wi
 
 </div>
 
-*[Homepage](/Shutter101/README.html)*
+*[Homepage](https://23w-gbac.github.io/Shutter101/)*
 
 *[Bact to Repository](https://github.com/23W-GBAC/Shutter101/tree/main)*
