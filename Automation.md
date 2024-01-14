@@ -607,16 +607,10 @@ done
 ##### MY REQUEST TO EVERYONE
 
 I am requesting for someone to try my script by adding your photos in my blog. Forked it, add new branch, add the images then run the script in your machine. 
-But make sure that exiftool and imagemagick is installed to your machine. 
 
-For Ubuntu users: 
+But make sure that **exiftool, imagemagick, grep, awk and shuf** are installed to your machine. 
 
-`sudo apt install imagemagick`
-
-`sudo apt install exiftool`
-
-
-For those who wnat to try, here is a simple  guide on how would you proceed on using the script.
+For those who whant to try, here is a simple  guide on how would you proceed on using the script.
 
 1. Create a folder with a name base on the location of youre photos in ~/jysndabu/photos/
 2. Copy the photos you would like to share in the folder you created
