@@ -5,7 +5,7 @@ ______
 
 ### WHOAMI
 
-Hello there, I'm **Jayson**. I'm a first year Health Informatics  student at THD European Campus Rottal-Inn. I have been learning programming languages like Python and R. I have very basic understanding of HTML, CSS and Javascript. I am fascinated of taking pictures of the places that I have been to so I created this repos as a blog to my photo gallery of my travels. While also providing  informations about photography. In addition, adding automation scipts while creating this blog.  
+Hello there, I'm **Jayson**. I'm a first year Health Informatics  student at THD European Campus Rottal-Inn. I have been learning programming languages like Python and R. I have very basic understanding of HTML, CSS and Javascript. I am fascinated of taking pictures of beautiful sceneries and architecture so I created this repo as a blog to my photo gallery of my travels. While also providing  informations about photography. In addition, adding automation scipts while creating this blog.
 
 ______ 
 
