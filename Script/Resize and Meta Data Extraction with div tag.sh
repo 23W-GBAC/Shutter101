@@ -58,6 +58,8 @@ for file in *.jpg *.jpeg *.png *.gif *.JPG *.JPEG; do
 	fi
 done 
 
+echo -e "</div>" >> $(basename "$(pwd)").md
+
 #Create a variable to select a cover image from the list of images. This will shuffle the images and select the first image in the list. 
 photocover=$(shuf -n 1 resized_images_list.md)
 

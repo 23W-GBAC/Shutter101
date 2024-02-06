@@ -43,9 +43,9 @@ Details like aperture, shutter speed, and ISO reveal the technical choices made 
 		<img src="/Shutter101/photos/Burghausen/img/20231210165720_IMG_8550.JPG" alt="20231210165720_IMG_8550">
 		<figcaption><a href="/Shutter101/photos/Burghausen/Burghausen.html">DE: Burghausen</a></figcaption>
 	</figure>
-<figure>
+	<figure>
 		<img src='/Shutter101/photos/Passau/img/IMG_9499.jpg' alt='IMG_9499.jpg'>
-		<figcaption><a href='/Shutter101/photos/Passau/Passau.html'>Passau</a></figcaption>
+		<figcaption><a href='/Shutter101/photos/Passau/Passau.html'>DE: Passau</a></figcaption>
 	</figure>
 </div>
 

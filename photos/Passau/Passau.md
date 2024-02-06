@@ -6,23 +6,23 @@ Passau, a German city on the Austrian border, lies at the confluence of the Danu
 <div class='gallery'>
 	<figure>
 		<img src='/Shutter101/photos/Passau/img/IMG_9491.jpg' alt='IMG_9491.jpg'>
-		<figcaption>Canon EOS M50, 1/3200-sec, f/3.2, ISO200, Unknown (4208) 16mm</figcaption>
+		<figcaption>Canon EOS M50, 1/3200-sec, f/3.2, ISO200, Sigma 16mm f/1.4 DC DN</figcaption>
 	</figure>
 	<figure>
 		<img src='/Shutter101/photos/Passau/img/IMG_9493.jpg' alt='IMG_9493.jpg'>
-		<figcaption>Canon EOS M50, 1/2000-sec, f/3.2, ISO200, Unknown (4208) 16mm</figcaption>
+		<figcaption>Canon EOS M50, 1/2000-sec, f/3.2, ISO200, Sigma 16mm f/1.4 DC DN</figcaption>
 	</figure>
 	<figure>
 		<img src='/Shutter101/photos/Passau/img/IMG_9499.jpg' alt='IMG_9499.jpg'>
-		<figcaption>Canon EOS M50, 1/1000-sec, f/3.2, ISO200, Unknown (4208) 16mm</figcaption>
+		<figcaption>Canon EOS M50, 1/1000-sec, f/3.2, ISO200, Sigma 16mm f/1.4 DC DN</figcaption>
 	</figure>
 	<figure>
 		<img src='/Shutter101/photos/Passau/img/IMG_9495.jpg' alt='IMG_9495.jpg'>
-		<figcaption>Canon EOS M50, 1/1000-sec, f/3.2, ISO200, Unknown (4208) 16mm</figcaption>
+		<figcaption>Canon EOS M50, 1/1000-sec, f/3.2, ISO200, Sigma 16mm f/1.4 DC DN</figcaption>
 	</figure>
 	<figure>
 		<img src='/Shutter101/photos/Passau/img/IMG_9501.jpg' alt='IMG_9501.jpg'>
-		<figcaption>Canon EOS M50, 1/1000-sec, f/3.2, ISO200, Unknown (4208) 16mm</figcaption>
+		<figcaption>Canon EOS M50, 1/1000-sec, f/3.2, ISO200, Sigma 16mm f/1.4 DC DN</figcaption>
 	</figure>
 	<figure>
 		<img src='/Shutter101/photos/Passau/img/IMG_9517.jpg' alt='IMG_9517.jpg'>
@@ -30,7 +30,7 @@ Passau, a German city on the Austrian border, lies at the confluence of the Danu
 	</figure>
 	<figure>
 		<img src='/Shutter101/photos/Passau/img/IMG_9508.jpg' alt='IMG_9508.jpg'>
-		<figcaption>Canon EOS M50, 1/640-sec, f/3.2, ISO200, Unknown (4208) 16mm</figcaption>
+		<figcaption>Canon EOS M50, 1/640-sec, f/3.2, ISO200, Sigma 16mm f/1.4 DC DN</figcaption>
 	</figure>
 	<figure>
 		<img src='/Shutter101/photos/Passau/img/IMG_9516.jpg' alt='IMG_9516.jpg'>
@@ -38,9 +38,9 @@ Passau, a German city on the Austrian border, lies at the confluence of the Danu
 	</figure>
 	<figure>
 		<img src='/Shutter101/photos/Passau/img/IMG_9520.jpg' alt='IMG_9520.jpg'>
-		<figcaption>Canon EOS M50, 1/800-sec, f/4.0, ISO200, Unknown (4208) 16mm</figcaption>
+		<figcaption>Canon EOS M50, 1/800-sec, f/4.0, ISO200, Sigma 16mm f/1.4 DC DN</figcaption>
 	</figure>
-
+</div>
 
 *[Homepage](https://23w-gbac.github.io/Shutter101/)*
 
