@@ -23,7 +23,9 @@ ______
 
 One of the problem that I encounter while rendering my Github page  is the slow loading of my pictures. Given all my pictures are large in size, which I should already expect to happen. I keep all my pictures as high quality as much as possible but in preserving these attributes each images are to be in large file size. I do post-processing in Adobe Lightroom one RAW image is ca 40mb in size after conversion to JPG it will size down to ca. 10-15mb which is stillhigh. I do not want to do again a compression in my Lightroom as I will locate each images  again in my Lightroom library. So I opted to do it in CLI instead, which makes it way more faster. In my photo gallery, my images does not need to be in 100% of their actual resolution  which is 6000x4000. I will resize each images to exactly 600x600 that will result to significantly lower in file size. 
 
-My approach is to use the **direnv**. Why? My photo gallery contains  folder of the places I visited, each folder will only contains 10 photos maximum. It means that once I fulfill the 10 photos to each folder I will not add any more to it. Because of that I will only possibly open the folder once that is why I will use **direnv**.
+My approach is to use the **direnv**. Why? My photo gallery contains  folder of the places I visited, each folder will only contain 9 photos minimum. Then will add more as I want to but not often that's why it is better to use the **.envrc** because I will only open again the folder casually,  so  no need for constant checking whether the are new images added.
+
+The process of creating the script is as follows:
 
 1. I check if direnv is already pre-installed to my system. Which is not so I will intsall it first. I'm using Manjaro as my distro, I will provide a [link](https://direnv.net/docs/installation.html) for the other distro like Ubuntu. 
 
@@ -44,7 +46,7 @@ mkdir Gallery1
 cp ~/jysndabu/.envrc ~/jysndabu/photos/Gallery1
 ```
 
-My .envrc contains shell scripting that resize every images in the folder while keeping a record to the images that will be processed so that the script  will not repeat the resizing of all images if I added new photos or if I enter the directory again. It will only resize untrack photos. This will  not replace my original photos  but to create a resized copy of each which will be loacted to the specific folder called "img". To this we have to create a loop which check all imgaes in the folder if certain condition are met then it will perform certain tasks. 
+My .envrc contains shell scripting that resize every images in the folder while keeping a record to the images that will be processed so that the script  will not repeat the resizing of all images if I added new photos or if I enter the directory again. It will only resize untrack photos. This will  not replace my original photos  but to create a resized copy of each which will be loacted to the specific folder called "img". To this we have to create a loop which check all imgaes in the folder if certain condition are met then it will perform certain tasks.
 
 In this script I use [imagemagick](https://imagemagick.org/index.php) to resize images  and **grep** for searching the images in the list. 
 
@@ -139,14 +141,24 @@ done
 - [x] Tasks from Week 1
 - [x] To automate the creation of my gallery container each location like in Phil.md, Simbach.md, Heidelburg.md so everytime I add new collection it will self generate this markdown file. 
 
+
+*Note: Revision Feb 6, 2024.*
+
+*After few times using the .envrc script I updated the script above and no longer in  use. I revise the script with relation to the other automation I did. The .envrc does not contain solely image resizing but with image description aswell. The new code is written with a name AddAdditionalImageswithdivtag.sh*, which is posted in blog post 3.
+
+#### My Script vs Manual Input (FEB 6, 2024)
+
+"Passau" album was used to caculate the time difference for manual input and with the use of the script. The gallery contain 9 photos.
+Doing the manual resizing using the Adobe Lightroom, It took me 2 minutes 41 seconds to resize 9 photos if I use the a script it took me 6.35 seconds for the same number og photos. How much I save with my time? 2 mins and 35 seconds.
+
 ______
 
 ### UPDATE 2 | Dec.11, 2023
 
-##### Issue 2: AUTO GENERATE IMAGE DESCRIPTION FROM A META DATA. 
+##### Issue 2: MANUAL INPUT OF IMAGE DESCRIPTION FROM A META DATA.
 
-Next issue was my manually typing of the image description of each images. I should create a script where I am  able to fetch all the necessary description from the metadata of the photo and put it as a description of the photo. I will be using the **EXIFTOOL** and **AWK** to do this.
-Here is the link for the documenation of [exiftool](https://exiftool.org/exiftool_pod.html). 
+Next issue was my manually typing of the image description of each images. I decided to create also a script where I am  able to fetch all the necessary description from the metadata of the photo and put it as a description of the photo, as it takes time to do it manually. I will be using the **EXIFTOOL** and **AWK** to do this.
+Here is the link for the documenation of [exiftool](https://exiftool.org/exiftool_pod.html). Then after extracting the meta data, I will create a mardown file which contains the metadata  but will be formatted with html tags. So that, I will not also manually type my markdown file from scratch.
 
 First, I set the directory of my terminal where are the photos located. In this example I use the folder "Simbach". Then in the command line:
 
@@ -339,7 +351,7 @@ for file in *.{jpg,jpeg,png,gif,JPG,JPEG}; do
 done
 ```
 
-Creating the markdown file I will base the name of it on the name of the directory itself. We use *pwd(print working directory)* to get the directory name then *basename* for getting only the last part of the directory.  If I try pwd in the terminal it will give this: 
+Creating the markdown file, I will name it base on the name of the directory itself. We use *pwd(print working directory)* to get the directory name then *basename* for getting only the last part of the directory.  If I try pwd in the terminal it will give this:
 
 >/home/jayson/jysndabu/photos/Simbach
 
@@ -471,15 +483,27 @@ And that would be my task for next week.
 - [x] To polish the "auto generate description" script to make it reusable.
 - [x] Try to merge the script of Resize Image and Auto Generate Description.
 
+
+#### My Script vs Manual Input (FEB 6, 2024)
+
+"Passau" album was used to caculate the time difference for manual input and with the use of the script. The gallery contain 9 photos.
+With fetching the image description, I need to open each photos and check the metadata in the summary description, which is also time consuming.
+4 minutes and 5 seconds is what I need to get the metadata of 9 photos,  with the script it is just 4.18 seconds. For the creation of my base mardkdown file and  if I manually input everything, the required for me is 10 minutes and 45 seconds. A huge difference if I use a script which took only 1 second!!
+Around 14 minutes and 44 seconds of my time is  save if using the script for 9 photos.
+
+
+*Note: Revision Feb.6, 2024*
+
+*The code above will no longer exist as seperate script, I revised it and combine all the automation into 1 script The new code is posted in blog post 3.
 ______
 
 ### UPDATE 3 | Dec.22, 2023
 
 ##### ORGANIZE AUTOMATICALLY NEWLY ADDED COLLECTION OF IMAGES INCLUDING AUTOMATIC SELECTING OF THE THUMBNAIL.
 
-To answer my previous issue, I poslished and combined the previous scripts of resizing and the meta data extraction into one script. This  script (**Resize and Meta Data Extraction with div tag.sh**) will be run only once at the beginning when I initially copy my new images. It will also create the necessary markdown files that I will be using later for my portfolio. I also change the format of my photogallery container, I used html tag like figure and figure tag to customize the layout of the images. There will be two version of my scripts one with pure markdown fomart and the other is with html tags.
+To answer my previous issue, I poslished and combined the previous scripts of resizing and the meta data extraction into one script. This  script (**Resize and Meta Data Extraction with div tag.sh**) will be run only once at the beginning when I create new album in the photogallery. It will also create the necessary markdown files that I will be using later for my portfolio. I also change the format of my photogallery container, I used html tag like figure and figure tag to customize the layout of the images. There will be two version of my scripts one with pure markdown format and the other is with html tags.
 
-In addition to that, I have also included a feature where it will also automatically insert the new collection to my [photogallery](https://23w-gbac.github.io/Shutter101/photogallery.html) by using **grep** and **sed**. Grep will ceck if the collection is already in the photo gallery if not then it will run sed. Sed will then search my insertion point which will be the "</div>", it will insert the new figure tag before the </div>. 
+In addition to that, I have also included a feature where it will also automatically insert the new album to my [photogallery](https://23w-gbac.github.io/Shutter101/photogallery.html) by using **grep** and **sed**. Grep will ceck if the album is already in the photo gallery if not then it will run sed. Sed will then search my insertion point which will be the "</div>", it will insert the new figure tag before the </div>.
 
 ```
 figuretag=$"	<figure>\n\t\t<img src='/Shutter101/photos/$(basename "$(pwd)")/img/$photocover' alt='$photocover'>\n\t\t<figcaption><a href='/Shutter101/photos/$(basename "$(pwd)")/$(basename "$(pwd)").html'>$(basename "$(pwd)")</a></figcaption>\n\t</figure>"
@@ -567,7 +591,7 @@ fi
 ```
 
 
-The next script (**AddAdditionalImageswithdivtag.sh**) will through **.envrc**. The purpose of this is to check everytime I enter the folder if new images are added. If there are new images, it will resize and extract the meta data of the image then revise the respective markdown files.  But be sure that **direnv allow** is turn on to  the desired directory for this script to work. 
+The next script (**AddAdditionalImageswithdivtag.sh**) will run as **.envrc**. The purpose of this is to check everytime I enter the folder if new images are added. If there are new images, it will resize and extract the meta data of the image then revise the respective markdown files.  But be sure that **direnv allow** is turn on to  the desired directory for this script to work.
 
 
 ```
@@ -656,6 +680,12 @@ The result should be like this:
 I also need some feedback regarding with my code as you can see I have used a lot of conditional statements if and else. I can ommit these if and else statement but making sure that the script will be run only once because it you run it again and  it will just continue to add the images without checking if they are already in the photo gallery. 
 
 *If you encounter a problem doing this or something is not right, please don't hesitate to contact me.*
+
+
+#### My Script vs Manual Input (FEB 6, 2024)
+
+"Passau" album was used to caculate the time difference for manual input and with the use of the script. The gallery contain 9 photos.
+Using the script **Resize and Meta Data Extraction with div tag.sh** it only took 9 seconds to complete the resizing, metadata extraction and base markdown creation. Manually doing it will require me for around 17 minutes and 30 seconds.
 
 ______
 
@@ -821,6 +851,10 @@ for filename in os.listdir(source_folder):
 ```
 
 Base on the result I would prefer using the BASH instead of Python, my script consist of only of 6 lines of code instead of 14. If you will create this Python code, how would be your approach?
+
+#### My Script vs Manual Input (FEB 6, 2024)
+
+From above example it took me for about 2 minutes to manually check and copy starred images from my camera. While using the **copystarredfiles.sh**, it was 13 seconds only.
 
 ______
 
