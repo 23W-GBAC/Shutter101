@@ -353,7 +353,7 @@ done
 
 Creating the markdown file, I will name it base on the name of the directory itself. We use *pwd(print working directory)* to get the directory name then *basename* for getting only the last part of the directory.  If I try pwd in the terminal it will give this:
 
->/home/jayson/jysndabu/photos/Simbach
+/home/jayson/jysndabu/photos/Simbach
 
 To get the Simabch name,  I added basename.
 
@@ -369,7 +369,7 @@ Then I will create a variable in which the value will be the result of the combi
 
 Then after getting all the necessary description I will append this to the created markdown file formatted to an image tag for markdown followed by description. 
 
->![Alt Text](Image Path)
+> ! [Alt Text] (Image Path)
 >
 >Image Description
 >
@@ -858,8 +858,6 @@ From above example it took me for about 2 minutes to manually check and copy sta
 
 ______
 
-
-## END OF MY AUTOMATION PROJECT
 
 
 *[Homepage](README.md)*
